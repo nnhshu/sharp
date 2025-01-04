@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="border-b hidden md:block">
+        <div class="container mx-auto flex items-center justify-between py-4 border-solid">
+            <div class="logo">
+                <img src="../img/logo-sharp.svg" width="130" alt="">
+            </div>
+            <div class="flex gap-4 items-center">
+                <div class="flex items-center gap-4">
+                    <h2 class="text-2xl bg-[--primary-color] px-16 py-2 text-white">TRANG CHỦ</h2>
+                    <div class="w-2 min-h-12 bg-[--primary-color]"></div>
+                    <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_h.svg"
+                        width="24" alt=""></a>
+                    <div class="quick_link flex items-center gap-2 relative min-w-11">
+                        <a href="javascript:void(0)" onclick="toggleSearchInput()" class="w-11 h-11 flex items-center justify-center absolute">
+                            <img src="../img/icon_s_red.svg" width="24" alt="Search">
+                        </a>
+                        <input id="search-input" type="text" class="hidden px-4 py-2 border border-gray-300 rounded pl-11" placeholder="Nhập từ khóa...">
+                    </div>
+                </div>
+                <div class="lang flex items-center gap-4">
+                    <img src="../img/icon_lang.svg" width="24" alt="">
+                    <span class="text-base decoration-solid">Tiếng Việt</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <script>
+        function toggleSearchInput() {
+            const searchInput = document.getElementById("search-input");
+            searchInput.classList.toggle("hidden");
+            if (!searchInput.classList.contains("hidden")) {
+                searchInput.focus();
+            }
+        }
+    </script>
+    
+    <div class="container-full px-4">
+        <div class="grid grid-cols-12">
+            <div class="col-span-4 flex item-center justify-center py-4 gap-4 relative group">
+                <span>Bảo hành sản phẩm</span>
+                <img src="../img/icon_down.svg" width="24" alt="">
+                <div class="dropdown-content absolute left-0 hidden bg-white shadow-lg rounded-md py-2 mt-8 w-full">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dịch vụ bảo hành</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Thời gian bảo hành</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Điều kiện bảo hành</a>
+                </div>
+            </div>
+
+            <div class="col-span-4 flex item-center justify-center py-4 gap-4 relative group">
+                <span>Thông tin sản phẩm</span>
+                <img src="../img/icon_down.svg" width="24" alt="">
+                <div class="dropdown-content absolute left-0 hidden bg-white shadow-lg rounded-md py-2 mt-8 w-full">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Chi tiết sản phẩm</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Công nghệ sản phẩm</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Tính năng nổi bật</a>
+                </div>
+            </div>
+
+            <div class="col-span-4 flex item-center justify-center py-4 gap-4 relative group">
+                <span>Mua hàng online</span>
+                <img src="../img/icon_down.svg" width="24" alt="">
+                <div class="dropdown-content absolute left-0 hidden bg-white shadow-lg rounded-md py-2 mt-8 w-full">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Mua hàng trực tuyến</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Khuyến mãi online</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Hướng dẫn mua hàng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="../img/banner_head.png" alt="">
+    </div>
+
+    <main class="container mx-auto overflow-hidden p-8">
+        <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
+            <img src="../img/icon_back.svg" width="20" alt="">
+            <span class="decoration-1">Quay lại</span>
+        </a>
+        <h3 class="text-2xl font-bold">Kích hoạt bảo hành</h3>
+        <div class="w-1/2 mx-auto gap-4 mt-4 mb-8">
+            <div class="form-control mt-4">
+                <label for="username" class="mb-2 block font-semibold text-sm">Họ và tên</label>
+                <input id="username" type="text" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Họ và tên...">
+              </div>
+
+              <div class="form-control mt-4">
+                <label for="phone" class="mb-2 block font-semibold text-sm">Số điện thoại</label>
+                <input id="phone" type="text" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Số điện thoại...">
+              </div>
+
+              <div class="form-control mt-4">
+                <label for="email" class="mb-2 block font-semibold text-sm">Email</label>
+                <input id="email" type="email" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Email...">
+              </div>
+        </div>
+          
+    </main>
+
+    <footer>
+        <div class="footer_top bg-[--bg-dark] px-8 py-4">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-12 gap-4 md:gap-4">
+                    <div class="col-span-3 text-white">
+                        <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
+                        <span>Tel: 1800 1599</span>
+                    </div>
+                    <div class="col-span-6 text-white border-l border-r">
+                        <div class="w-1/2 mx-auto">
+                            <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
+                            <span>callcenter@svn.sharp-world.com</span>
+                        </div>
+                    </div>
+                    <div class="col-span-3 text-white">
+                        <div class="w-2/3 ml-auto">
+                            <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
+                            <div class="flex gap-4 items-center justify-start">
+                                <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.png" alt="" class="w-6 h-6"></a>
+                                <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt="" class="w-6 h-6"></a>
+                                <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img src="../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom bg-white p-8">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-12 gap-4 md:gap-4">
+                    <div class="col-span-3">
+                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
+                        <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức, tp.hcm</span>
+                        <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
+                        <span class="block mb-4"><b>Mã số doanh nghiệp</b>: 0308159258
+                            <br>Do sở KH&ĐT cấp ngày 13/3/2009
+                        </span>
+                        <a href="#" class="flex gap-4">
+                            <img src="../img/icon_phone.svg" alt="" class="w-6 h-6">
+                            <span>Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
+                        </a>
+                    </div>
+                    <div class="col-span-6 text-white">
+                        <div class="w-1/2 mx-auto">
+                            <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
+                            <ul>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo hành</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa chữa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa chữa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật thông tin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-span-3 text-white">
+                        <div class="w-2/3 ml-auto">
+                            <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
+                            <ul>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo hành uỷ quyền</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến phản hồi</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp ý</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const API_URL = 'https://provinces.open-api.vn/api/';
+
+            $('#confirm-btn').on('click', function () {
+                var username = $('#username').val();
+                var email = $('#email').val();
+                var phoneNumber = $('#phone').val();
+                var otherPhone = $('#other-phone').val();
+
+                // Kiểm tra các trường nhập liệu
+                var phoneRegex = /^[0-9]{10,11}$/;
+                var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+                var isValid = true;
+
+                // Kiểm tra các trường thông tin
+                if (username === "") {
+                    isValid = false;
+                }
+                if (!emailRegex.test(email)) {
+                    isValid = false;
+                }
+                if (!phoneRegex.test(phoneNumber)) {
+                    isValid = false;
+                }
+                if (otherPhone && !phoneRegex.test(otherPhone)) {
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    // Chuyển sang Bước 2
+                    $('#step-1').hide();
+                    $('#step-2').show();
+                    $('#progress-step-1').removeClass('active');
+                    $('#progress-step-2').addClass('active');
+
+                    // Tải danh sách thành phố từ API
+                    $.get(`${API_URL}provinces`, function (cities) {
+                        cities.forEach(function (city) {
+                            $('#city').append(
+                                `<option value="${city.code}">${city.name}</option>`
+                                );
+                        });
+                    });
+                } else {
+                    $('#error-message').removeClass('hidden');
+                }
+            });
+
+            // Khi chọn thành phố, tải danh sách huyện
+            $('#city').on('change', function () {
+                var cityCode = $(this).val();
+                if (cityCode) {
+                    $.get(`${API_URL}districts/${cityCode}`, function (districts) {
+                        $('#district').html('<option value="">Chọn huyện</option>');
+                        districts.forEach(function (district) {
+                            $('#district').append(
+                                `<option value="${district.code}">${district.name}</option>`
+                                );
+                        });
+                    });
+                }
+            });
+
+            // Khi chọn huyện, tải danh sách xã
+            $('#district').on('change', function () {
+                var districtCode = $(this).val();
+                if (districtCode) {
+                    $.get(`${API_URL}wards/${districtCode}`, function (wards) {
+                        $('#ward').html('<option value="">Chọn xã</option>');
+                        wards.forEach(function (ward) {
+                            $('#ward').append(
+                                `<option value="${ward.code}">${ward.name}</option>`
+                                );
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

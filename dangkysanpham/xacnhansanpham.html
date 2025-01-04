@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal {
+            background-color: white;
+            padding: 2rem;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .overlay.show {
+            display: flex;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="border-b hidden md:block">
+        <div class="container mx-auto flex items-center justify-between py-4 border-solid">
+            <div class="logo">
+                <img src="../img/logo-sharp.svg" width="130" alt="">
+            </div>
+            <div class="flex gap-4 items-center">
+                <div class="flex items-center gap-4">
+                    <h2 class="text-2xl bg-[--primary-color] px-16 py-2 text-white">ĐĂNG NHẬP</h2>
+                    <div class="w-2 min-h-12 bg-[--primary-color]"></div>
+                    <div class="quick_link flex item-center gap-2">
+                        <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_h.svg"
+                                width="24" alt=""></a>
+                        <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_s_red.svg"
+                                width="24" alt=""></a>
+                    </div>
+                </div>
+                <div class="lang flex items-center gap-4">
+                    <img src="../img/icon_lang.svg" width="24" alt="">
+                    <span class="text-base decoration-solid">Tiếng Việt</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="../img/banner_head.png" alt="">
+    </div>
+    <main class="bg-white container-full mx-auto overflow-hidden py-8">
+        <div class="grid grid-cols-12 gap-0 md:gap-4">
+            <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center">
+                <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
+                    <img src="../img/icon_back.svg" width="20" alt="">
+                    <span class="decoration-1 underline">Xác nhận sản phẩm</span>
+                </a>
+                <h2 class="font-bold text-2xl mb-4">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h2>
+                <div class="grid grid-cols-12 gap-0 md:gap-4 mt-6">
+                    <div class="md:col-span-3 col-span-12">
+                        <img src="../img/1_1.png" alt="" class="w-full">
+                    </div>
+                    <div class="md:col-span-9 col-span-12">
+                        <table class="w-full">
+                            <tbody>
+                                <tr class="border border-[--border-color]">
+                                    <td class="w-1/2 p-2 p-4 bg-[--bg-base]">Loại sản phẩm</td>
+                                    <td class="w-1/2 p-2 p-4">Điện lạnh</td>
+                                </tr>
+                                <tr class="border border-[--border-color]">
+                                    <td class="w-1/2 p-2 p-4 bg-[--bg-base]">Tên sản phẩm</td>
+                                    <td class="w-1/2 p-2 p-4">Máy lạnh BSW</td>
+                                </tr>
+                                <tr class="border border-[--border-color]">
+                                    <td class="w-1/2 p-2 p-4 bg-[--bg-base]">Số serial</td>
+                                    <td class="w-1/2 p-2 p-4">12345l</td>
+                                </tr>
+                                <tr class="border border-[--border-color]">
+                                    <td class="w-1/2 p-2 p-4 bg-[--bg-base]">Ngày mua hàng</td>
+                                    <td class="w-1/2 p-2 p-4">12/01/2010</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="flex items-start gap-4 justify-start mt-4">
+                            <input type="checkbox" name="" id="" class="mt-1">
+                            <label for="" class="text-light text-sm">Tôi đã đọc và đồng ý với <a href="#" class="underline font-bold">Chính sách bảo hành</a> của Sharp Việt Nam</label>
+                        </div>
+                        <div class="mt-4">
+                            <button id="confirm-btn"
+                                class="inline-flex item-center justify-center gap-4 btn-main bg-[--primary-color] w-32 py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
+                                <span id="btn-text">Đăng ký</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_top bg-[--bg-dark] px-8 py-4">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-12 gap-4 md:gap-4">
+                    <div class="col-span-3 text-white">
+                        <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
+                        <span>Tel: 1800 1599</span>
+                    </div>
+                    <div class="col-span-6 text-white border-l border-r">
+                        <div class="w-1/2 mx-auto">
+                            <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
+                            <span>callcenter@svn.sharp-world.com</span>
+                        </div>
+                    </div>
+                    <div class="col-span-3 text-white">
+                        <div class="w-2/3 ml-auto">
+                            <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
+                            <div class="flex gap-4 items-center justify-start">
+                                <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.png" alt="" class="w-6 h-6"></a>
+                                <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt="" class="w-6 h-6"></a>
+                                <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img src="../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom bg-white p-8">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-12 gap-4 md:gap-4">
+                    <div class="col-span-3">
+                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
+                        <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức, tp.hcm</span>
+                        <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
+                        <span class="block mb-4"><b>Mã số doanh nghiệp</b>: 0308159258
+                            <br>Do sở KH&ĐT cấp ngày 13/3/2009
+                        </span>
+                        <a href="#" class="flex gap-4">
+                            <img src="../img/icon_phone.svg" alt="" class="w-6 h-6">
+                            <span>Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
+                        </a>
+                    </div>
+                    <div class="col-span-6 text-white">
+                        <div class="w-1/2 mx-auto">
+                            <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
+                            <ul>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo hành</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa chữa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa chữa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật thông tin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-span-3 text-white">
+                        <div class="w-2/3 ml-auto">
+                            <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
+                            <ul>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo hành uỷ quyền</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến phản hồi</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp ý</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="overlay" class="overlay">
+        <div class="modal text-left">
+            <h3 class="text-xl font-bold mb-4">Không tìm thấy sản phẩm</h3>
+            <span class="text-sm font-light block mb-4">Hiện tại, Sharp Việt Nam không tìm thấy thông tin sản phẩm của Quý khách trong dữ liệu sản phẩm.</span>
+            <span class="text-sm font-bold block mb-2">Nguyên nhân có thể do:</span>
+            <ul class="list-disc">
+                <li class="text-sm font-light block mb-2 pl-2">Tên sản phẩm chưa được cung cấp chính xác</li>
+                <li class="text-sm font-light block mb-2 pl-2">Số Serial sản phẩm chưa được nhập đúng</li>
+            </ul>
+            <span class="text-sm font-light block mb-2">Quý khách vui lòng kiểm tra lại thông tin và thử lại. </span>
+            <span class="text-sm font-light block mb-2">Nếu cần hỗ trợ , xin vui lòng liên hệ với Sharp Việt Nam qua:</span>
+            <a href="#" class="flex gap-4 mb-2">
+                <img src="../img/icon_phone.svg" alt="" class="w-6 h-6">
+                <span class="text-sm block">Hotline: <b class="text-[--primary-color]">1-800-1599</b> (Miễn phí)</span>
+            </a>
+            <a href="#" class="flex gap-4 mb-2">
+                <img src="../img/icon_phone.svg" alt="" class="w-6 h-6">
+                <span class="text-sm block">callcenter@svn.sharp-world.com</span>
+            </a>
+            <div class="mt-4">
+                <span class="text-sm font-light block mb-2">Trân trọng,</span>
+                <span class="text-sm font-light block mb-2"><b>Sharp Việt Nam</b></span>
+            </div>
+            <button id="close-btn"
+                class=" mt-4 flex item-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
+                <span id="btn-text">Quay lại</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#confirm-btn').on('click', function () {
+                $('#overlay').addClass('show');
+            });
+
+            $('#close-btn').on('click', function () {
+                $('#overlay').removeClass('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

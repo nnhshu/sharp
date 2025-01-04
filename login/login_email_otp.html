@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .spinner-border {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="border-b hidden md:block">
+    <div class="container mx-auto flex items-center justify-between py-4 border-solid">
+      <div class="logo">
+        <img src="../img/logo-sharp.svg" width="130" alt="">
+      </div>
+      <div class="flex gap-4 items-center">
+        <div class="flex items-center gap-4">
+          <h2 class="text-2xl bg-[--primary-color] px-16 py-2 text-white">ĐĂNG NHẬP</h2>
+          <div class="w-2 min-h-12 bg-[--primary-color]"></div>
+          <div class="quick_link flex item-center gap-2">
+            <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_h.svg" width="24" alt=""></a>
+            <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_s_red.svg" width="24" alt=""></a>
+          </div>
+        </div>
+        <div class="lang flex items-center gap-4">
+          <img src="../img/icon_lang.svg" width="24" alt="">
+          <span class="text-base decoration-solid">Tiếng Việt</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-[--bg-base] container-full mx-auto h-screen overflow-hidden">
+    <div class="grid grid-cols-12 gap-0 md:gap-4 h-screen">
+      <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center">
+        <div class="relative md:w-96 w-full h-full md:h-auto mx-auto bg-white md:border-solid md:border box-shadow md:p-8 px-4 py-16 md:block flex justify-between flex-col">
+            <div id="loading-overlay" class="overlay hidden absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
+                <div class="spinner-border border-4 border-t-transparent border-[--primary-color] w-10 h-10 rounded-full"></div>
+            </div>
+            <div class="login-top">
+            <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
+              <img src="../img/icon_back.svg" width="20" alt="">
+              <span class="decoration-1">Quay lại</span>
+            </a>
+            <h2 class="text-2xl font-bold mb-2">Nhập mã OTP</h2>
+            <span class="text-sm font-light block">Kiểm tra và nhập mã OTP được gửi qua email <b class="font-bold">tenkhachhang@gmail.com</b></span>
+            <div class="flex items-center gap-2 bg-[--bg-warning] text-[--text-warning] text-sm mt-4 p-2">
+              <img src="../img/warning-circle_2.svg" width="20" alt=""> Không chia sẻ mã OTP với bất kỳ ai
+            </div>
+            <div class="otp-container mb-4 mt-4">
+              <input type="text" class="otp-input" maxlength="1" id="otp-1">
+              <input type="text" class="otp-input" maxlength="1" id="otp-2">
+              <input type="text" class="otp-input" maxlength="1" id="otp-3">
+              <input type="text" class="otp-input" maxlength="1" id="otp-4">
+              <input type="text" class="otp-input" maxlength="1" id="otp-5">
+              <input type="text" class="otp-input" maxlength="1" id="otp-6">
+            </div>
+            <div id="error-message" class="error-message hidden text-[--primary-color] text-sm mt-2">
+              <div class="flex items-center gap-2 mb-2">
+                <img src="../img/warning-circle.svg" width="20" alt=""> OTP không đúng, vui lòng nhập lại
+              </div>
+            </div>
+            <div id="timer-container" class="text-sm">
+              <span>Thời gian mã OTP hết hiệu lực: <b id="timer">04:59</b></span>
+            </div>
+            <div id="resend-message" class="hidden mt-4 text-sm cursor-pointer">
+              Không nhận được mã? <b id="resend-link font-bold">Gửi lại</b>
+            </div>
+          </div>
+          <div class="login-bottom mt-4">
+            <button id="confirm-btn"
+              class="flex item-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
+              <span id="btn-text">Xác nhận</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.otp-input').on('input', function () {
+        var $this = $(this);
+        var nextInput = $this.next('.otp-input');
+        if ($this.val().length === 1 && nextInput.length) {
+          nextInput.focus();
+        }
+
+        if ($this.val().length === 0) {
+          var prevInput = $this.prev('.otp-input');
+          if (prevInput.length) {
+            prevInput.focus();
+          }
+        }
+      });
+
+      var timeLeft = 300;
+      var timerInterval = setInterval(function () {
+        var minutes = Math.floor(timeLeft / 60);
+        var seconds = timeLeft % 60;
+        $('#timer').text(
+          (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds
+        );
+
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          $('#timer').text('00:00');
+          $('#timer-container').addClass('hidden');
+          $('#resend-message').removeClass('hidden');
+        }
+        timeLeft--;
+      }, 1000);
+
+      $('#confirm-btn').on('click', function () {
+        var otp = '';
+        $('.otp-input').each(function () {
+          otp += $(this).val();
+        });
+
+        if (otp.length === 6) {
+          $('#error-message').addClass('hidden');
+          $('#loading-overlay').removeClass('hidden');
+          $('#btn-text').text('Đang kiểm tra...');
+          
+          setTimeout(function () {
+            $('#loading-overlay').addClass('hidden');
+            $('#btn-text').text('Xác nhận');
+            alert("OTP đã nhập: " + otp);
+          }, 2000);
+        } else {
+          $('#error-message').removeClass('hidden');
+        }
+      });
+
+      $('#resend-link').on('click', function () {
+        alert("Mã OTP đã được gửi lại!");
+        $('#timer-container').removeClass('hidden');
+        $('#resend-message').addClass('hidden');
+        timeLeft = 300;
+        $('#timer').text('05:00');
+        $('#timer-container').text('Thời gian mã OTP hết hiệu lực: 05:00');
+      });
+    });
+  </script>
+</body>
+
+</html>
