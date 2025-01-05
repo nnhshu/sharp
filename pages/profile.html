@@ -11,15 +11,15 @@
 
 <body>
     <header class="border-b hidden md:block">
-        <div class="container mx-auto flex items-center justify-between py-4 border-solid">
+        <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid">
             <div class="logo">
                 <img src="../img/logo-sharp.svg" width="130" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
-                    <h2 class="text-2xl bg-[--primary-color] px-16 py-2 text-white">TRANG CHỦ</h2>
+                    <h2 class="text-xl bg-[--primary-color] px-16 py-2 text-white">TRANG CHỦ</h2>
                     <div class="w-2 min-h-12 bg-[--primary-color]"></div>
-                    <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_h.svg"
+                    <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg"
                         width="24" alt=""></a>
                     <div class="quick_link flex items-center gap-2 relative min-w-11">
                         <a href="javascript:void(0)" onclick="toggleSearchInput()" class="w-11 h-11 flex items-center justify-center absolute">
@@ -48,61 +48,61 @@
     
     <div class="container-full px-4">
         <div class="grid grid-cols-12">
-            <div class="col-span-4 flex item-center justify-center py-4 gap-4 relative group">
+            <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group">
                 <span>Bảo hành sản phẩm</span>
                 <img src="../img/icon_down.svg" width="24" alt="">
                 <div class="dropdown-content absolute left-0 hidden bg-white shadow-lg rounded-md py-2 mt-8 w-full">
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dịch vụ bảo hành</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Thời gian bảo hành</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Điều kiện bảo hành</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Dịch vụ bảo hành</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thời gian bảo hành</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Điều kiện bảo hành</a>
                 </div>
             </div>
 
-            <div class="col-span-4 flex item-center justify-center py-4 gap-4 relative group">
+            <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group">
                 <span>Thông tin sản phẩm</span>
                 <img src="../img/icon_down.svg" width="24" alt="">
                 <div class="dropdown-content absolute left-0 hidden bg-white shadow-lg rounded-md py-2 mt-8 w-full">
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Chi tiết sản phẩm</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Công nghệ sản phẩm</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Tính năng nổi bật</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Chi tiết sản phẩm</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Công nghệ sản phẩm</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Tính năng nổi bật</a>
                 </div>
             </div>
 
-            <div class="col-span-4 flex item-center justify-center py-4 gap-4 relative group">
+            <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group">
                 <span>Mua hàng online</span>
                 <img src="../img/icon_down.svg" width="24" alt="">
                 <div class="dropdown-content absolute left-0 hidden bg-white shadow-lg rounded-md py-2 mt-8 w-full">
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Mua hàng trực tuyến</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Khuyến mãi online</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Hướng dẫn mua hàng</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Mua hàng trực tuyến</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Khuyến mãi online</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Hướng dẫn mua hàng</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner main-wrap">
         <img src="../img/banner_head.png" alt="">
     </div>
 
     <main class="container mx-auto overflow-hidden p-8">
         <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
             <img src="../img/icon_back.svg" width="20" alt="">
-            <span class="decoration-1">Quay lại</span>
+            <span class="underline">Quay lại</span>
         </a>
         <h3 class="text-2xl font-bold">Kích hoạt bảo hành</h3>
         <div class="w-1/2 mx-auto gap-4 mt-4 mb-8">
             <div class="form-control mt-4">
                 <label for="username" class="mb-2 block font-semibold text-sm">Họ và tên</label>
-                <input id="username" type="text" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Họ và tên...">
+                <input id="username" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Họ và tên...">
               </div>
 
               <div class="form-control mt-4">
                 <label for="phone" class="mb-2 block font-semibold text-sm">Số điện thoại</label>
-                <input id="phone" type="text" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Số điện thoại...">
+                <input id="phone" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại...">
               </div>
 
               <div class="form-control mt-4">
                 <label for="email" class="mb-2 block font-semibold text-sm">Email</label>
-                <input id="email" type="email" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Email...">
+                <input id="email" type="email" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Email...">
               </div>
         </div>
           
@@ -110,7 +110,7 @@
 
     <footer>
         <div class="footer_top bg-[--bg-dark] px-8 py-4">
-            <div class="container mx-auto">
+            <div class="container-full mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-3 text-white">
                         <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
@@ -136,7 +136,7 @@
             </div>
         </div>
         <div class="footer_bottom bg-white p-8">
-            <div class="container mx-auto">
+            <div class="container-full mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-3">
                         <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>

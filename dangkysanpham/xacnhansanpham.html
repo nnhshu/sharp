@@ -48,19 +48,21 @@
 
 <body>
     <header class="border-b hidden md:block">
-        <div class="container mx-auto flex items-center justify-between py-4 border-solid">
+        <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid">
             <div class="logo">
                 <img src="../img/logo-sharp.svg" width="130" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
-                    <h2 class="text-2xl bg-[--primary-color] px-16 py-2 text-white">ĐĂNG NHẬP</h2>
+                    <h2 class="text-xl bg-[--primary-color] px-16 py-2 text-white">TRANG CHỦ</h2>
                     <div class="w-2 min-h-12 bg-[--primary-color]"></div>
-                    <div class="quick_link flex item-center gap-2">
-                        <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_h.svg"
-                                width="24" alt=""></a>
-                        <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_s_red.svg"
-                                width="24" alt=""></a>
+                    <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg"
+                        width="24" alt=""></a>
+                    <div class="quick_link flex items-center gap-2 relative min-w-11">
+                        <a href="javascript:void(0)" onclick="toggleSearchInput()" class="w-11 h-11 flex items-center justify-center absolute">
+                            <img src="../img/icon_s_red.svg" width="24" alt="Search">
+                        </a>
+                        <input id="search-input" type="text" class="hidden px-4 py-2 border border-gray-300 rounded pl-11" placeholder="Nhập từ khóa...">
                     </div>
                 </div>
                 <div class="lang flex items-center gap-4">
@@ -70,18 +72,68 @@
             </div>
         </div>
     </header>
-    <div class="banner">
+    
+    <script>
+        function toggleSearchInput() {
+            const searchInput = document.getElementById("search-input");
+            searchInput.classList.toggle("hidden");
+            if (!searchInput.classList.contains("hidden")) {
+                searchInput.focus();
+            }
+        }
+    </script>
+    
+    <div class="container-full px-4">
+        <div class="grid grid-cols-12">
+            <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
+                <span>Bảo hành sản phẩm</span>
+                <img src="../img/icon_down.svg" width="24" alt="">
+                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg border-t-2 border-[--primary-color] mt-8 w-full">
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Danh sách sản phẩm</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Kích hoạt bảo hành</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Tra cứu bảo hành</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Đăng ký sửa chữa</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Tra cứu sửa chữa</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Cập nhật thông tin</a>
+                </div>
+            </div>
+            <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
+                <span>Thông tin sản phẩm</span>
+                <img src="../img/icon_down.svg" width="24" alt="">
+                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg border-t-2 border-[--primary-color] mt-8 w-full">
+                    <a href="https://vn.sharp/thiet-bi-nghe-nhin" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết bị nghe nhìn</a>
+                    <a href="https://vn.sharp/dieu-hoa-may-loc-khi" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Điều Hòa & Máy Lọc Khí</a>
+                    <a href="https://vn.sharp/thiet-bi-gia-dung" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết Bị Gia Dụng</a>
+                    <a href="https://vn.sharp/thiet-bi-nha-bep" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết Bị Nhà Bếp</a>
+                    <a href="https://vn.sharp/cham-soc-ca-nhan" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Chăm sóc cá nhân</a>
+                    <a href="https://vn.sharp/products/thiet-bi-van-phong" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết bị văn phòng</a>
+                    <a href="https://vn.sharp/gallery" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Gallery</a>
+                </div>
+            </div>
+
+            <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
+                <span>Mua hàng online</span>
+                <img src="../img/icon_down.svg" width="24" alt="">
+                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg border-t-2 border-[--primary-color] mt-8 w-full">
+                    <a href="https://www.lazada.vn/shop/sharp-flagship-store" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Lazada Sharp Flagship Store</a>
+                    <a href="https://shopee.vn/sharp_official_store" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Shopee Sharp Official Store</a>
+                    <a href="https://www.cocorolife.vn/" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Cocorolife</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner main-wrap">
         <img src="../img/banner_head.png" alt="">
     </div>
-    <main class="bg-white container-full mx-auto overflow-hidden py-8">
+    <main class="bg-white main-wrap mx-auto overflow-hidden py-8">
         <div class="grid grid-cols-12 gap-0 md:gap-4">
             <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center">
                 <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
                     <img src="../img/icon_back.svg" width="20" alt="">
                     <span class="decoration-1 underline">Xác nhận sản phẩm</span>
                 </a>
-                <h2 class="font-bold text-2xl mb-4">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h2>
-                <div class="grid grid-cols-12 gap-0 md:gap-4 mt-6">
+                <h2 class="font-bold text-2xl mb-8">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h2>
+                <div class="grid grid-cols-12 gap-0 md:gap-8">
                     <div class="md:col-span-3 col-span-12">
                         <img src="../img/1_1.png" alt="" class="w-full">
                     </div>
@@ -89,20 +141,20 @@
                         <table class="w-full">
                             <tbody>
                                 <tr class="border border-[--border-color]">
-                                    <td class="w-1/2 p-2 p-4 bg-[--bg-base]">Loại sản phẩm</td>
-                                    <td class="w-1/2 p-2 p-4">Điện lạnh</td>
+                                    <td class="w-1/2 p-4 p-4 bg-[--bg-base]">Loại sản phẩm</td>
+                                    <td class="w-1/2 p-4 p-4">Điện lạnh</td>
                                 </tr>
                                 <tr class="border border-[--border-color]">
-                                    <td class="w-1/2 p-2 p-4 bg-[--bg-base]">Tên sản phẩm</td>
-                                    <td class="w-1/2 p-2 p-4">Máy lạnh BSW</td>
+                                    <td class="w-1/2 p-4 p-4 bg-[--bg-base]">Tên sản phẩm</td>
+                                    <td class="w-1/2 p-4 p-4">Máy lạnh BSW</td>
                                 </tr>
                                 <tr class="border border-[--border-color]">
-                                    <td class="w-1/2 p-2 p-4 bg-[--bg-base]">Số serial</td>
-                                    <td class="w-1/2 p-2 p-4">12345l</td>
+                                    <td class="w-1/2 p-4 p-4 bg-[--bg-base]">Số serial</td>
+                                    <td class="w-1/2 p-4 p-4">12345l</td>
                                 </tr>
                                 <tr class="border border-[--border-color]">
-                                    <td class="w-1/2 p-2 p-4 bg-[--bg-base]">Ngày mua hàng</td>
-                                    <td class="w-1/2 p-2 p-4">12/01/2010</td>
+                                    <td class="w-1/2 p-4 p-4 bg-[--bg-base]">Ngày mua hàng</td>
+                                    <td class="w-1/2 p-4 p-4">12/01/2010</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -112,7 +164,7 @@
                         </div>
                         <div class="mt-4">
                             <button id="confirm-btn"
-                                class="inline-flex item-center justify-center gap-4 btn-main bg-[--primary-color] w-32 py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
+                                class="inline-flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-32 py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
                                 <span id="btn-text">Đăng ký</span>
                             </button>
                         </div>
@@ -123,7 +175,7 @@
     </main>
     <footer>
         <div class="footer_top bg-[--bg-dark] px-8 py-4">
-            <div class="container mx-auto">
+            <div class="container-full mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-3 text-white">
                         <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
@@ -149,7 +201,7 @@
             </div>
         </div>
         <div class="footer_bottom bg-white p-8">
-            <div class="container mx-auto">
+            <div class="container-full mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-3">
                         <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
@@ -232,7 +284,7 @@
                 <span class="text-sm font-light block mb-2"><b>Sharp Việt Nam</b></span>
             </div>
             <button id="close-btn"
-                class=" mt-4 flex item-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
+                class=" mt-4 flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
                 <span id="btn-text">Quay lại</span>
             </button>
         </div>

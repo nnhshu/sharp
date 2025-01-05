@@ -11,17 +11,17 @@
 
 <body>
   <header class="border-b hidden md:block">
-    <div class="container mx-auto flex items-center justify-between py-4 border-solid">
+    <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid">
       <div class="logo">
         <img src="../img/logo-sharp.svg" width="130" alt="">
       </div>
       <div class="flex gap-4 items-center">
         <div class="flex items-center gap-4">
-          <h2 class="text-2xl bg-[--primary-color] px-16 py-2 text-white">ĐĂNG NHẬP</h2>
+          <h2 class="text-xl bg-[--primary-color] px-16 py-2 text-white">ĐĂNG NHẬP</h2>
           <div class="w-2 min-h-12 bg-[--primary-color]"></div>
           <div class="quick_link flex item-center gap-2">
-            <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_h.svg" width="24" alt=""></a>
-            <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_s_red.svg" width="24" alt=""></a>
+            <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg" width="24" alt=""></a>
+            <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg" width="24" alt=""></a>
           </div>
         </div>
         <div class="lang flex items-center gap-4">
@@ -42,7 +42,7 @@
           <div class="login-top">
             <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
               <img src="../img/icon_back.svg" width="20" alt="">
-              <span class="decoration-1">Quay lại</span>
+              <span class="underline">Quay lại</span>
             </a>
             <div class="progress-bar mt-4 mb-4 flex items-center gap-4 w-full h-1">
                 <div id="progress-step-1" class="progress-step active"></div>
@@ -55,50 +55,50 @@
             <div id="step-1">
               <div class="form-control mt-4">
                 <label for="username" class="mb-2 block font-semibold text-sm">Tên đăng nhập</label>
-                <input id="username" type="text" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Tên đăng nhập...">
+                <input id="username" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Tên đăng nhập...">
               </div>
 
               <div class="form-control mt-4">
                 <label for="email" class="mb-2 block font-semibold text-sm">Email</label>
-                <input id="email" type="email" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Email...">
+                <input id="email" type="email" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Email...">
               </div>
 
               <div class="form-control mt-4">
                 <label for="phone" class="mb-2 block font-semibold text-sm">Số điện thoại</label>
-                <input id="phone" type="text" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Số điện thoại...">
+                <input id="phone" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại...">
               </div>
 
               <div class="form-control mt-4">
                 <label for="other-phone" class="mb-2 block font-semibold text-sm">Số điện thoại khác (nếu có)</label>
-                <input id="other-phone" type="text" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Số điện thoại khác...">
+                <input id="other-phone" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại khác...">
               </div>
             </div>
 
             <div id="step-2" class="hidden">
               <div class="form-control mt-4">
                 <label for="city" class="mb-2 block font-semibold text-sm">Thành phố</label>
-                <select id="city" class="border border-[--border-color] block rounded-lg w-full px-4 py-2">
+                <select id="city" class="border border-[--border-color] block rounded-md w-full px-4 py-3">
                   <option value="">Chọn thành phố</option>
                 </select>
               </div>
 
               <div class="form-control mt-4">
                 <label for="district" class="mb-2 block font-semibold text-sm">Quận, huyện</label>
-                <select id="district" class="border border-[--border-color] block rounded-lg w-full px-4 py-2">
+                <select id="district" class="border border-[--border-color] block rounded-md w-full px-4 py-3">
                   <option value="">Chọn huyện</option>
                 </select>
               </div>
 
               <div class="form-control mt-4">
                 <label for="ward" class="mb-2 block font-semibold text-sm">Phường xã</label>
-                <select id="ward" class="border border-[--border-color] block rounded-lg w-full px-4 py-2">
+                <select id="ward" class="border border-[--border-color] block rounded-md w-full px-4 py-3">
                   <option value="">Chọn xã</option>
                 </select>
               </div>
 
               <div class="form-control mt-4">
                 <label for="address" class="mb-2 block font-semibold text-sm">Số nhà, tên đường</label>
-                <input id="address" type="text" class="border border-[--border-color] block rounded-lg w-full px-4 py-2" placeholder="Chi tiết địa chỉ...">
+                <input id="address" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Chi tiết địa chỉ...">
               </div>
               <div class="flex items-start gap-4 justify-start mt-4">
                 <input type="checkbox" name="" id="" class="mt-1">
@@ -112,7 +112,7 @@
           </div>
 
           <div class="login-bottom mt-4">
-            <button id="confirm-btn" class="flex item-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
+            <button id="confirm-btn" class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
               <span id="btn-text">Hoàn thành</span>
             </button>
           </div>

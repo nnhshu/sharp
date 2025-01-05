@@ -39,18 +39,18 @@
 
 <body>
   <header class="border-b hidden md:block">
-    <div class="container mx-auto flex items-center justify-between py-4 border-solid">
+    <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid">
       <div class="logo">
         <img src="../img/logo-sharp.svg" width="130" alt="">
       </div>
       <div class="flex gap-4 items-center">
         <div class="flex items-center gap-4">
-          <h2 class="text-2xl bg-[--primary-color] px-16 py-2 text-white">ĐĂNG NHẬP</h2>
+          <h2 class="text-xl bg-[--primary-color] px-16 py-2 text-white">ĐĂNG NHẬP</h2>
           <div class="w-2 min-h-12 bg-[--primary-color]"></div>
           <div class="quick_link flex item-center gap-2">
-            <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_h.svg" width="24"
+            <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg" width="24"
                 alt=""></a>
-            <a href="" class="w-11 h-11 flex item-center justify-center"><img src="../img/icon_s_red.svg" width="24"
+            <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg" width="24"
                 alt=""></a>
           </div>
         </div>
@@ -75,7 +75,7 @@
           <div class="login-top">
             <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
               <img src="../img/icon_back.svg" width="20" alt="">
-              <span class="decoration-1">Quay lại</span>
+              <span class="underline">Quay lại</span>
             </a>
             <h2 class="text-2xl font-bold mb-2">Nhập số điện thoại</h2>
             <span class="text-sm font-light block">Chúng tôi sẽ gửi mã OTP qua số điện thoại này</span>
@@ -84,7 +84,7 @@
             </div>
             <div class="form-control mt-6 mb-6">
               <label for="" class="mb-2 block font-light text-sm">Số điện thoại</label>
-              <input id="email" type="text" class="border border-[--border-color] block rounded-lg w-full px-4 py-2"
+              <input id="email" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3"
                 placeholder="Số điện thoại...">
               <div id="error-message" class="error-message hidden text-[--primary-color] text-sm mt-2">
                 <div class="flex items-center gap-2"><img src="../img/warning-circle.svg" width="20" alt=""> Số điện
@@ -94,7 +94,7 @@
           </div>
           <div class="login-bottom mt-4">
             <button id="confirm-btn"
-              class="flex item-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
+              class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
               <span id="btn-text">Xác nhận</span>
             </button>
           </div>
