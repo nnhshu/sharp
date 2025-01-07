@@ -29,31 +29,34 @@
                 </div>
             </div>
         </header>
-        <main class="bg-[--bg-base] main-wrap mx-auto h-screen overflow-hidden">
-            <div class="grid grid-cols-12 gap-0 md:gap-4 h-screen">
-                <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center">
-                    <div class="md:w-96 w-full h-full md:h-auto mx-auto bg-white md:border-solid md:border box-shadow md:p-8 px-4 py-16 md:block flex justify-between flex-col">
-                        <div class="login-top">
-                            <h2 class="text-2xl font-bold mb-2">Đăng Nhập</h2>
-                            <span class="text-sm font-light block">Vui lòng nhập số điện thoại</span>
-                            <div class="form-control mt-6 mb-6">
-                                <label for="" class="mb-2 block font-light text-sm">Số điện thoại</label>
-                                <input type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại...">
+        <main class="bg-[--bg-base]">
+            <div class="main-wrap mx-auto h-screen overflow-hidden">
+                <div class="grid grid-cols-12 gap-0 md:gap-4 h-screen">
+                    <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center">
+                        <div class="md:w-96 w-full h-full md:h-auto mx-auto bg-white md:border-solid md:border box-shadow md:p-8 px-4 py-16 md:block flex justify-between flex-col">
+                            <div class="login-top">
+                                <h2 class="text-2xl font-bold mb-2">Đăng Nhập</h2>
+                                <span class="text-sm font-light block">Vui lòng nhập số điện thoại</span>
+                                <div class="form-control mt-6 mb-6">
+                                    <label for="" class="mb-2 block font-light text-sm">Số điện thoại</label>
+                                    <input type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại...">
+                                </div>
+                                <div class="flex items-center gap-4 justify-end">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="" class="text-light text-sm">Tự động đăng nhập lần sau</label>
+                                </div>
                             </div>
-                            <div class="flex items-center gap-4 justify-end mb-4">
-                                <input type="checkbox" name="" id="">
-                                <label for="" class="text-light text-sm">Tự động đăng nhập lần sau</label>
+                            <div class="login-bottom mt-8">
+                                <a href="login.html" class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                                    Đăng nhập
+                                </a>
+                                <a href="login_email.html" class="text-center block mt-4 text-sm">Đăng nhập bằng email</a>
                             </div>
-                        </div>
-                        <div class="login-bottom">
-                            <a href="login.html" class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:bg-[--hover-bg] duration-300">
-                                Đăng nhập
-                            </a>
-                            <a href="login_email.html" class="text-center block mt-4 text-sm">Đăng nhập bằng email</a>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </main>
     </body>
 </html>

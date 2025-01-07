@@ -21,6 +21,16 @@ body {
     font-size: 14px;
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url('../img/arrow_down.svg');
+    background-repeat: no-repeat;
+    background-position-x: 96%;
+    background-position-y: 10px;
+  }
+
 .max-width-form{
     width: 460px;
 }
