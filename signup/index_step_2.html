@@ -31,59 +31,156 @@
       </div>
     </div>
   </header>
-
-  <main class="bg-[--bg-base] container-full mx-auto h-screen overflow-hidden">
-    <div class="grid grid-cols-12 gap-0 md:gap-4 h-screen">
-      <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center">
-        <div class="relative md:w-96 w-full h-full md:h-auto mx-auto bg-white md:border-solid md:border box-shadow md:p-8 px-4 py-16 md:block flex justify-between flex-col">
-          <div id="loading-overlay" class="overlay hidden absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
-            <div class="spinner-border border-4 border-t-transparent border-[--primary-color] w-10 h-10 rounded-full"></div>
+  <main class="bg-[--bg-base] mx-auto overflow-hidden">
+    <div class="main-wrap">
+      <div class="grid grid-cols-12 gap-0 md:gap-4">
+        <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center pt-8 pb-16">
+          <div class="relative max-width-form mx-auto bg-white md:border-solid md:border box-shadow md:p-8 px-4 py-16 md:block flex justify-between flex-col">
+            <div id="loading-overlay" class="overlay hidden absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
+              <div class="spinner-border border-4 border-t-transparent border-[--primary-color] w-10 h-10 rounded-full"></div>
+            </div>
+            <div class="login-top">
+              <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
+                <img src="../img/icon_back.svg" width="20" alt="">
+                <span class="underline">Quay lại</span>
+              </a>
+              <div class="progress-bar mt-4 mb-4 flex items-center gap-4 w-full h-1">
+                  <div id="progress-step-1" class="progress-step"></div>
+                  <div id="progress-step-2" class="progress-step active"></div>
+              </div>
+              <h2 class="text-2xl font-bold mb-2">Địa chỉ cần bảo hành</h2>
+  
+              <div class="form-control mt-4">
+                <label for="username" class="mb-2 block font-light text-sm">Tên đăng nhập</label>
+                <input id="username" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Tên đăng nhập...">
+              </div>
+  
+              <div class="form-control mt-4">
+                <label for="email" class="mb-2 block font-light text-sm">Email</label>
+                <input id="email" type="email" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Email...">
+              </div>
+  
+              <div class="form-control mt-4">
+                <label for="phone" class="mb-2 block font-light text-sm">Số điện thoại</label>
+                <input id="phone" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại...">
+              </div>
+  
+              <div class="form-control mt-4">
+                <label for="other-phone" class="mb-2 block font-light text-sm">Số điện thoại khác (nếu có)</label>
+                <input id="other-phone" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại khác...">
+              </div>
+  
+              <div id="error-message" class="error-message hidden text-[--primary-color] text-sm mt-2">
+                <div class="flex items-center gap-2"><img src="../img/warning-circle.svg" width="20" alt=""> Số điện thoại không hợp lệ, vui lòng nhập lại</div>
+              </div>
+              <div class="flex items-start gap-4 justify-start mt-6">
+                <input type="checkbox" name="" id="" class="mt-1">
+                <label for="" class="text-light text-sm">Tôi đã đọc và đồng ý với <a href="#" class="underline font-bold">Chính sách bảo hành</a> của Sharp Việt Nam</label>
+            </div>
+            <div class="flex items-start gap-4 justify-start mt-6">
+              <input type="checkbox" name="" id="" class="mt-1">
+              <label for="" class="text-light text-sm">Bằng cách đánh dấu vào ô này, tôi chấp nhận các Cập nhật Dịch vụ của Sharp Việt Nam bao gồm: Dịch vụ Sharp Việt Nam và thông tin tiếp thị, thông báo sản phẩm và dịch vụ mới cũng như các ưu đãi, sự kiện và bản tin đặc biệt.</label>
           </div>
-          <div class="login-top">
-            <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
-              <img src="../img/icon_back.svg" width="20" alt="">
-              <span class="underline">Quay lại</span>
-            </a>
-            <div class="progress-bar mt-4 mb-4 flex items-center gap-4 w-full h-1">
-                <div id="progress-step-1" class="progress-step"></div>
-                <div id="progress-step-2" class="progress-step active"></div>
             </div>
-            <h2 class="text-2xl font-bold mb-2">Địa chỉ cần bảo hành</h2>
-
-            <div class="form-control mt-4">
-              <label for="username" class="mb-2 block font-light text-sm">Tên đăng nhập</label>
-              <input id="username" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Tên đăng nhập...">
+  
+            <div class="login-bottom mt-8">
+              <button id="confirm-btn" class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                <span id="btn-text">Xác nhận</span>
+              </button>
             </div>
-
-            <div class="form-control mt-4">
-              <label for="email" class="mb-2 block font-light text-sm">Email</label>
-              <input id="email" type="email" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Email...">
-            </div>
-
-            <div class="form-control mt-4">
-              <label for="phone" class="mb-2 block font-light text-sm">Số điện thoại</label>
-              <input id="phone" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại...">
-            </div>
-
-            <div class="form-control mt-4">
-              <label for="other-phone" class="mb-2 block font-light text-sm">Số điện thoại khác (nếu có)</label>
-              <input id="other-phone" type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại khác...">
-            </div>
-
-            <div id="error-message" class="error-message hidden text-[--primary-color] text-sm mt-2">
-              <div class="flex items-center gap-2"><img src="../img/warning-circle.svg" width="20" alt=""> Số điện thoại không hợp lệ, vui lòng nhập lại</div>
-            </div>
-          </div>
-
-          <div class="login-bottom mt-4">
-            <button id="confirm-btn" class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
-              <span id="btn-text">Xác nhận</span>
-            </button>
           </div>
         </div>
       </div>
     </div>
   </main>
+
+  <footer>
+    <div class="footer_top bg-[--bg-dark] lg:px-8 px-4 py-4">
+        <div class="main-wrap mx-auto">
+            <div class="grid grid-cols-12 gap-4 md:gap-4">
+                <div class="col-span-12 lg:col-span-3 text-white">
+                    <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
+                    <span>Tel: 1800 1599</span>
+                </div>
+                <div class="lg:col-span-6 col-span-12 text-white lg:border-l lg:border-r">
+                    <div class=" w-full lg:w-1/2 mx-auto">
+                        <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
+                        <span>callcenter@svn.sharp-world.com</span>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-3 text-white">
+                    <div class="w-full lg:w-2/3 ml-auto">
+                        <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
+                        <div class="flex gap-4 items-center justify-start">
+                            <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.png" alt="" class="w-6 h-6"></a>
+                            <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt="" class="w-6 h-6"></a>
+                            <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img src="../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom bg-white p-8">
+        <div class="main-wrap mx-auto">
+            <div class="grid grid-cols-12 gap-4 md:gap-4">
+                <div class="col-span-12 lg:col-span-3">
+                    <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
+                    <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức, tp.hcm</span>
+                    <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
+                    <span class="block mb-4"><b>Mã số doanh nghiệp</b>: 0308159258
+                        <br>Do sở KH&ĐT cấp ngày 13/3/2009
+                    </span>
+                    <a href="#" class="flex gap-4">
+                        <img src="../img/icon_phone.svg" alt="" class="w-6 h-6">
+                        <span>Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
+                    </a>
+                </div>
+                <div class="col-span-12 lg:col-span-6 text-white">
+                    <div class=" w-full lg:w-1/2 mx-auto">
+                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
+                        <ul>
+                            <li>
+                                <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản phẩm</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản phẩm</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo hành</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa chữa</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa chữa</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật thông tin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-3 text-white">
+                    <div class="w-full lg:w-2/3 ml-auto">
+                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
+                        <ul>
+                            <li>
+                                <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo hành uỷ quyền</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến phản hồi</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp ý</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>

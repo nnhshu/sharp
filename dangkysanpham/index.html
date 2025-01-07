@@ -7,43 +7,6 @@
     <title>Đăng nhập</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(8px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal {
-            background-color: white;
-            padding: 2rem;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        .overlay.show {
-            display: flex;
-            animation: fadeIn 0.3s ease-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-    </style>
 </head>
 
 <body>
@@ -56,11 +19,13 @@
                 <div class="flex items-center gap-4">
                     <h2 class="text-xl bg-[--primary-color] px-16 py-2 text-white">ĐĂNG KÝ SẢN PHẨM</h2>
                     <div class="w-2 min-h-12 bg-[--primary-color]"></div>
-                    <div class="quick_link flex item-center gap-2">
-                        <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg"
-                                width="24" alt=""></a>
-                        <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg"
-                                width="24" alt=""></a>
+                    <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg"
+                        width="24" alt=""></a>
+                    <div class="quick_link flex items-center gap-2 relative min-w-11">
+                        <a href="javascript:void(0)" onclick="toggleSearchInput()" class="w-11 h-11 flex items-center justify-center absolute">
+                            <img src="../img/icon_s_red.svg" width="24" alt="Search">
+                        </a>
+                        <input id="search-input" type="text" class="hidden px-4 py-2 border border-gray-300 rounded pl-11" placeholder="Nhập từ khóa...">
                     </div>
                 </div>
                 <div class="lang flex items-center gap-4">
@@ -70,18 +35,18 @@
             </div>
         </div>
     </header>
-    <div class="banner main-wrap">
-        <img src="../img/banner_head.png" alt="">
+    <div class="banner">
+        <img src="../img/banner_head.png" alt="" width="100%">
     </div>
     <main class="bg-white main-wrap mx-auto overflow-hidden">
         <div class="grid grid-cols-12 gap-0 md:gap-4 h-">
-            <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center pt-8">
+            <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center pt-4">
                 <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
                     <img src="../img/icon_back.svg" width="20" alt="">
                     <span class="underline">Quay lại</span>
                 </a>
                 <div
-                    class="relative w-1/2 h-full md:h-auto mx-auto md:p-8 px-4 py-16 md:block flex justify-between flex-col">
+                    class="relative max-width-form mx-auto pb-16 md:block flex justify-between flex-col">
                     <div class="login-top">
                         <h2 class="text-2xl font-bold mb-8">Đăng ký sản phẩm</h2>
                         <div>
@@ -143,12 +108,11 @@
                             </div>
                             <div class="form-control mt-4">
                                 <label for="phone" class="mb-2 block font-semibold text-sm">Hình ảnh đính kèm</label>
-                                <div class="upload-container">
+                                <div class="upload-container mb-4">
                                     <label for="file-upload" class="flex items-center gap-2 justify-center"><img src="../img/add.svg" width="20" alt=""> Thêm ảnh</label>
                                     <input type="file" id="file-upload" name="images" accept="image/*" multiple>
                                     <p class="info-text">Tem số serial, phiếu bảo hành,...</p>
                                 </div>
-                        
                                 <!-- Preview hình ảnh -->
                                 <div class="image-preview" id="image-preview"></div>
                             </div>
@@ -156,7 +120,7 @@
                     </div>
                     <div class="login-bottom mt-8">
                         <button id="confirm-btn"
-                            class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:scale-105 duration-300">
+                            class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:bg-[--hover-bg] duration-300">
                             <span id="btn-text">Xác nhận</span>
                         </button>
                     </div>
@@ -165,21 +129,21 @@
         </div>
     </main>
     <footer>
-        <div class="footer_top bg-[--bg-dark] px-8 py-4">
-            <div class="container-full mx-auto">
+        <div class="footer_top bg-[--bg-dark] lg:px-8 px-4 py-4">
+            <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
-                    <div class="col-span-3 text-white">
+                    <div class="col-span-12 lg:col-span-3 text-white">
                         <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
                         <span>Tel: 1800 1599</span>
                     </div>
-                    <div class="col-span-6 text-white border-l border-r">
-                        <div class="w-1/2 mx-auto">
+                    <div class="lg:col-span-6 col-span-12 text-white lg:border-l lg:border-r">
+                        <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
                             <span>callcenter@svn.sharp-world.com</span>
                         </div>
                     </div>
-                    <div class="col-span-3 text-white">
-                        <div class="w-2/3 ml-auto">
+                    <div class="col-span-12 lg:col-span-3 text-white">
+                        <div class="w-full lg:w-2/3 ml-auto">
                             <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
                             <div class="flex gap-4 items-center justify-start">
                                 <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.png" alt="" class="w-6 h-6"></a>
@@ -192,9 +156,9 @@
             </div>
         </div>
         <div class="footer_bottom bg-white p-8">
-            <div class="container-full mx-auto">
+            <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
-                    <div class="col-span-3">
+                    <div class="col-span-12 lg:col-span-3">
                         <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
                         <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức, tp.hcm</span>
                         <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
@@ -206,8 +170,8 @@
                             <span>Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
                         </a>
                     </div>
-                    <div class="col-span-6 text-white">
-                        <div class="w-1/2 mx-auto">
+                    <div class="col-span-12 lg:col-span-6 text-white">
+                        <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
                             <ul>
                                 <li>
@@ -231,8 +195,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-span-3 text-white">
-                        <div class="w-2/3 ml-auto">
+                    <div class="col-span-12 lg:col-span-3 text-white">
+                        <div class="w-full lg:w-2/3 ml-auto">
                             <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
                             <ul>
                                 <li>
@@ -253,6 +217,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/index.js"></script>
     <script>
         const fileInput = document.getElementById('file-upload');
         const imagePreviewContainer = document.getElementById('image-preview');
@@ -293,50 +258,6 @@
             const previews = document.querySelectorAll('.preview-item');
             previews[index].remove();
         }
-    </script>
-    <script>
-        // Function to handle the dropdown functionality
-        function setupDropdown(dropdownId, dropdownBtnId, dropdownTextId, dropdownListId) {
-            const dropdown = document.getElementById(dropdownId);
-            const dropdownBtn = document.getElementById(dropdownBtnId);
-            const dropdownList = document.getElementById(dropdownListId);
-            const dropdownText = document.getElementById(dropdownTextId);
-    
-            // Toggle dropdown visibility when the button is clicked
-            dropdownBtn.addEventListener('click', () => {
-                dropdown.classList.toggle('open');
-            });
-    
-            // Handle item selection from dropdown
-            dropdownList.querySelectorAll('li').forEach(item => {
-                item.addEventListener('click', (e) => {
-                    const value = e.target.dataset.value;
-                    const text = e.target.innerText;
-    
-                    // Update the selected value in the button
-                    dropdownText.innerText = text;
-    
-                    // Close the dropdown
-                    dropdown.classList.remove('open');
-    
-                    // Handle selected value (e.g., save to backend or use it elsewhere)
-                    console.log("Selected Value: ", value);
-                });
-            });
-    
-            // Close dropdown if clicked outside
-            document.addEventListener('click', (e) => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('open');
-                }
-            });
-        }
-    
-        // Setup dropdowns for product type and product name
-        document.addEventListener('DOMContentLoaded', () => {
-            setupDropdown('dropdown', 'dropdown-btn', 'dropdown-text', 'dropdown-list'); // Loại sản phẩm
-            setupDropdown('dropdown_tensanpham', 'dropdown-btn_tensanpham', 'dropdown-text_tensanpham', 'dropdown-list_tensanpham'); // Tên sản phẩm
-        });
     </script>
 </body>
 

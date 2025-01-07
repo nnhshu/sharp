@@ -7,43 +7,6 @@
     <title>Đăng nhập</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../css/style.css">
-    <style>
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(8px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal {
-            background-color: white;
-            padding: 2rem;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        .overlay.show {
-            display: flex;
-            animation: fadeIn 0.3s ease-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-    </style>
 </head>
 
 <body>
@@ -70,18 +33,57 @@
             </div>
         </div>
     </header>
-    <div class="banner main-wrap">
-        <img src="../../img/banner_head.png" alt="">
+    <div class="container-full px-4">
+        <div class="grid grid-cols-12">
+            <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
+                <span>Bảo hành sản phẩm</span>
+                <img src="../../img/icon_down.svg" width="24" alt="">
+                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg border-t-2 border-[--primary-color] mt-8 w-full">
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Danh sách sản phẩm</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Kích hoạt bảo hành</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Tra cứu bảo hành</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Đăng ký sửa chữa</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Tra cứu sửa chữa</a>
+                    <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Cập nhật thông tin</a>
+                </div>
+            </div>
+            <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
+                <span>Thông tin sản phẩm</span>
+                <img src="../../img/icon_down.svg" width="24" alt="">
+                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg border-t-2 border-[--primary-color] mt-8 w-full">
+                    <a href="https://vn.sharp/thiet-bi-nghe-nhin" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết bị nghe nhìn</a>
+                    <a href="https://vn.sharp/dieu-hoa-may-loc-khi" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Điều Hòa & Máy Lọc Khí</a>
+                    <a href="https://vn.sharp/thiet-bi-gia-dung" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết Bị Gia Dụng</a>
+                    <a href="https://vn.sharp/thiet-bi-nha-bep" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết Bị Nhà Bếp</a>
+                    <a href="https://vn.sharp/cham-soc-ca-nhan" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Chăm sóc cá nhân</a>
+                    <a href="https://vn.sharp/products/thiet-bi-van-phong" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết bị văn phòng</a>
+                    <a href="https://vn.sharp/gallery" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Gallery</a>
+                </div>
+            </div>
+
+            <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
+                <span>Mua hàng online</span>
+                <img src="../../img/icon_down.svg" width="24" alt="">
+                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg border-t-2 border-[--primary-color] mt-8 w-full">
+                    <a href="https://www.lazada.vn/shop/sharp-flagship-store" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Lazada Sharp Flagship Store</a>
+                    <a href="https://shopee.vn/sharp_official_store" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Shopee Sharp Official Store</a>
+                    <a href="https://www.cocorolife.vn/" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Cocorolife</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="../../img/banner_head.png" alt="" width="100%">
     </div>
     <main class="bg-white main-wrap mx-auto overflow-hidden">
         <div class="grid grid-cols-12 gap-0 md:gap-4 h-">
-            <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center pt-8">
+            <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center pt-4">
                 <a class="flex items-center justify-start gap-2 mb-4 text-sm" href="">
                     <img src="../../img/icon_back.svg" width="20" alt="">
                     <span class="underline">Quay lại</span>
                 </a>
                 <div
-                    class="relative w-1/3 h-full md:h-auto mx-auto md:p-8 px-4 py-16 md:block flex justify-between flex-col">
+                    class="relative max-width-form mx-auto pt-8 pb-16 md:block flex justify-between flex-col">
                     <div class="login-top">
                         <h2 class="text-2xl font-bold mb-2 text-center">Quét mã đăng ký</h2>
                         <p class="text-center text-sm">Điều chỉnh máy ảnh sao cho mã QR nằm trong khung hình</p>
@@ -93,7 +95,7 @@
                         </div>
                         <div id="mt-4">
                             <div class="form-control mt-4">
-                                <div class="border border-[--border-color] rounded-lg p-4 w-72 mx-auto">
+                                <div class="border border-[--border-color] rounded-lg p-4 w-72 mx-auto mb-4">
                                     <label for="file-upload" class="flex items-center gap-2 justify-start">
                                         <img src="../../img/upload.svg" class="w-16 h-16" alt="">
                                         <div class="text-left">
@@ -113,6 +115,93 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer_top bg-[--bg-dark] lg:px-8 px-4 py-4">
+            <div class="main-wrap mx-auto">
+                <div class="grid grid-cols-12 gap-4 md:gap-4">
+                    <div class="col-span-12 lg:col-span-3 text-white">
+                        <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
+                        <span>Tel: 1800 1599</span>
+                    </div>
+                    <div class="lg:col-span-6 col-span-12 text-white lg:border-l lg:border-r">
+                        <div class=" w-full lg:w-1/2 mx-auto">
+                            <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
+                            <span>callcenter@svn.sharp-world.com</span>
+                        </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-3 text-white">
+                        <div class="w-full lg:w-2/3 ml-auto">
+                            <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
+                            <div class="flex gap-4 items-center justify-start">
+                                <a href="https://zalo.me/3652092524472390581"><img src="../../img/zalo_footer.png" alt="" class="w-6 h-6"></a>
+                                <a href="https://www.facebook.com/sharpvietnam"><img src="../../img/fb_footer.svg" alt="" class="w-6 h-6"></a>
+                                <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img src="../../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom bg-white p-8">
+            <div class="main-wrap mx-auto">
+                <div class="grid grid-cols-12 gap-4 md:gap-4">
+                    <div class="col-span-12 lg:col-span-3">
+                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
+                        <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức, tp.hcm</span>
+                        <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
+                        <span class="block mb-4"><b>Mã số doanh nghiệp</b>: 0308159258
+                            <br>Do sở KH&ĐT cấp ngày 13/3/2009
+                        </span>
+                        <a href="#" class="flex gap-4">
+                            <img src="../img/icon_phone.svg" alt="" class="w-6 h-6">
+                            <span>Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
+                        </a>
+                    </div>
+                    <div class="col-span-12 lg:col-span-6 text-white">
+                        <div class=" w-full lg:w-1/2 mx-auto">
+                            <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
+                            <ul>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo hành</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa chữa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa chữa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật thông tin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-3 text-white">
+                        <div class="w-full lg:w-2/3 ml-auto">
+                            <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
+                            <ul>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo hành uỷ quyền</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến phản hồi</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp ý</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>

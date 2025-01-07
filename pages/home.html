@@ -7,6 +7,7 @@
     <title>Đăng nhập</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/index.js"></script>
 </head>
 
 <body>
@@ -35,16 +36,6 @@
             </div>
         </div>
     </header>
-    
-    <script>
-        function toggleSearchInput() {
-            const searchInput = document.getElementById("search-input");
-            searchInput.classList.toggle("hidden");
-            if (!searchInput.classList.contains("hidden")) {
-                searchInput.focus();
-            }
-        }
-    </script>
     
     <div class="container-full px-4">
         <div class="grid grid-cols-12">
@@ -85,8 +76,8 @@
             </div>
         </div>
     </div>
-    <div class="banner main-wrap">
-        <img src="../img/banner_head.png" alt="">
+    <div class="banner">
+        <img src="../img/banner_head.png" alt="" width="100%">
     </div>
 
     <main class="main-wrap mx-auto overflow-hidden lg:px-0 px-4 py-8">
@@ -205,21 +196,21 @@
     </main>
 
     <footer>
-        <div class="footer_top bg-[--bg-dark] px-8 py-4">
-            <div class="container-full mx-auto">
+        <div class="footer_top bg-[--bg-dark] lg:px-8 px-4 py-4">
+            <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
-                    <div class="col-span-3 text-white">
+                    <div class="col-span-12 lg:col-span-3 text-white">
                         <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
                         <span>Tel: 1800 1599</span>
                     </div>
-                    <div class="col-span-6 text-white border-l border-r">
-                        <div class="w-1/2 mx-auto">
+                    <div class="lg:col-span-6 col-span-12 text-white lg:border-l lg:border-r">
+                        <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
                             <span>callcenter@svn.sharp-world.com</span>
                         </div>
                     </div>
-                    <div class="col-span-3 text-white">
-                        <div class="w-2/3 ml-auto">
+                    <div class="col-span-12 lg:col-span-3 text-white">
+                        <div class="w-full lg:w-2/3 ml-auto">
                             <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
                             <div class="flex gap-4 items-center justify-start">
                                 <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.png" alt="" class="w-6 h-6"></a>
@@ -232,9 +223,9 @@
             </div>
         </div>
         <div class="footer_bottom bg-white p-8">
-            <div class="container-full mx-auto">
+            <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
-                    <div class="col-span-3">
+                    <div class="col-span-12 lg:col-span-3">
                         <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
                         <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức, tp.hcm</span>
                         <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
@@ -246,8 +237,8 @@
                             <span>Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
                         </a>
                     </div>
-                    <div class="col-span-6 text-white">
-                        <div class="w-1/2 mx-auto">
+                    <div class="col-span-12 lg:col-span-6 text-white">
+                        <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
                             <ul>
                                 <li>
@@ -271,8 +262,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-span-3 text-white">
-                        <div class="w-2/3 ml-auto">
+                    <div class="col-span-12 lg:col-span-3 text-white">
+                        <div class="w-full lg:w-2/3 ml-auto">
                             <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
                             <ul>
                                 <li>
