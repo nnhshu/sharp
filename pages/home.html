@@ -11,16 +11,16 @@
 </head>
 
 <body>
-    <header class="border-b hidden md:block">
+    <header class="border-b">
         <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid">
             <div class="logo">
                 <img src="../img/logo-sharp.svg" width="130" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
-                    <h2 class="text-xl bg-[--primary-color] px-16 py-2 text-white">TRANG CHỦ</h2>
-                    <div class="w-2 min-h-12 bg-[--primary-color]"></div>
-                    <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg"
+                    <h2 class="text-xl bg-[--primary-color] px-16 py-2 text-white hidden md:block">TRANG CHỦ</h2>
+                    <div class="w-2 min-h-12 bg-[--primary-color] hidden md:block"></div>
+                    <a href="" class="w-11 h-11 flex items-center justify-center hidden md:block"><img src="../img/icon_h.svg"
                         width="24" alt=""></a>
                     <div class="quick_link flex items-center gap-2 relative min-w-11">
                         <a href="javascript:void(0)" onclick="toggleSearchInput()" class="w-11 h-11 flex items-center justify-center absolute">
@@ -29,7 +29,7 @@
                         <input id="search-input" type="text" class="hidden px-4 py-2 border border-gray-300 rounded pl-11" placeholder="Nhập từ khóa...">
                     </div>
                 </div>
-                <div class="lang flex items-center gap-4">
+                <div class="lang md:flex items-center gap-4 hidden">
                     <img src="../img/icon_lang.svg" width="24" alt="">
                     <span class="text-base decoration-solid">Tiếng Việt</span>
                 </div>
@@ -37,7 +37,7 @@
         </div>
     </header>
     
-    <div class="container-full px-4">
+    <div class="container-full px-4 hidden md:block hidden md:block">
         <div class="grid grid-cols-12">
             <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
                 <span>Bảo hành sản phẩm</span>
@@ -64,7 +64,6 @@
                     <a href="https://vn.sharp/gallery" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Gallery</a>
                 </div>
             </div>
-
             <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
                 <span>Mua hàng online</span>
                 <img src="../img/icon_down.svg" width="24" alt="">
@@ -76,11 +75,11 @@
             </div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner hidden md:block">
         <img src="../img/banner_head.png" alt="" width="100%">
     </div>
 
-    <main class="main-wrap mx-auto overflow-hidden lg:px-0 px-4 py-8">
+    <main class="main-wrap mx-auto overflow-hidden h-screen md:h-auto lg:px-0 px-4 py-8">
         <h3 class="text-2xl font-bold">Kích hoạt bảo hành</h3>
         <div class="grid grid-cols-12 gap-4 mt-4 mb-8">
             <div
@@ -115,85 +114,146 @@
             </div>
         </div>
         <h3 class="text-2xl font-bold mb-4">Danh sách sản phẩm của tôi</h3>
-        <table class="min-w-full table-auto border-collapse border border-gray-300">
-            <thead>
-              <tr class="bg-gray-100">
-                <th class="px-4 py-2 border border-gray-300 text-left font-medium">STT</th>
-                <th class="px-4 py-2 border border-gray-300 text-left font-medium">Sản phẩm</th>
-                <th class="px-4 py-2 border border-gray-300 text-left font-medium">Model</th>
-                <th class="px-4 py-2 border border-gray-300 text-left font-medium">Số Seri</th>
-                <th class="px-4 py-2 border border-gray-300 text-left font-medium">Nơi mua hàng / Cửa hàng</th>
-                <th class="px-4 py-2 border border-gray-300 text-left font-medium">Ngày đăng ký bảo hành</th>
-                <th class="px-4 py-2 border border-gray-300 text-left font-medium">Ngày hết hạn bảo hành</th>
-                <th class="px-4 py-2 border border-gray-300 text-left font-medium">Tình trạng đăng ký bảo hành</th>
-                <th class="px-4 py-2 border border-gray-300 text-left font-medium">HDSD</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="px-4 py-2 border border-gray-300 text-left">1</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">SJ-SBX530WD-DG</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">123RE63</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">Điện máy xanh</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">18/04/2016</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">01/01/2024</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">
-                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
-                </td>
-                <td class="px-4 py-2 border border-gray-300 text-left">
-                    <a href="#" class="underline">Xem ngay</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="px-4 py-2 border border-gray-300 text-left">1</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">SJ-SBX530WD-DG</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">123RE63</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">Điện máy xanh</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">18/04/2016</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">01/01/2024</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">
-                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
-                </td>
-                <td class="px-4 py-2 border border-gray-300 text-left">
-                    <a href="#" class="underline">Xem ngay</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="px-4 py-2 border border-gray-300 text-left">1</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">SJ-SBX530WD-DG</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">123RE63</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">Điện máy xanh</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">18/04/2016</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">01/01/2024</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">
-                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
-                </td>
-                <td class="px-4 py-2 border border-gray-300 text-left">
-                    <a href="#" class="underline">Xem ngay</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="px-4 py-2 border border-gray-300 text-left">1</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">SJ-SBX530WD-DG</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">123RE63</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">Điện máy xanh</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">18/04/2016</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">01/01/2024</td>
-                <td class="px-4 py-2 border border-gray-300 text-left">
-                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
-                </td>
-                <td class="px-4 py-2 border border-gray-300 text-left">
-                    <a href="#" class="underline">Xem ngay</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          
+        <div class="hidden md:block">
+            <table class="min-w-full table-auto border-collapse border border-gray-300">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="px-4 py-2 border border-gray-300 text-left font-medium">STT</th>
+                    <th class="px-4 py-2 border border-gray-300 text-left font-medium">Sản phẩm</th>
+                    <th class="px-4 py-2 border border-gray-300 text-left font-medium">Model</th>
+                    <th class="px-4 py-2 border border-gray-300 text-left font-medium">Số Seri</th>
+                    <th class="px-4 py-2 border border-gray-300 text-left font-medium">Nơi mua hàng / Cửa hàng</th>
+                    <th class="px-4 py-2 border border-gray-300 text-left font-medium">Ngày đăng ký bảo hành</th>
+                    <th class="px-4 py-2 border border-gray-300 text-left font-medium">Ngày hết hạn bảo hành</th>
+                    <th class="px-4 py-2 border border-gray-300 text-left font-medium">Tình trạng đăng ký bảo hành</th>
+                    <th class="px-4 py-2 border border-gray-300 text-left font-medium">HDSD</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="px-4 py-2 border border-gray-300 text-left">1</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">SJ-SBX530WD-DG</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">123RE63</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">Điện máy xanh</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">18/04/2016</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">01/01/2024</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">
+                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
+                    </td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">
+                        <a href="#" class="underline">Xem ngay</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-2 border border-gray-300 text-left">1</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">SJ-SBX530WD-DG</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">123RE63</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">Điện máy xanh</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">18/04/2016</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">01/01/2024</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">
+                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
+                    </td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">
+                        <a href="#" class="underline">Xem ngay</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-2 border border-gray-300 text-left">1</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">SJ-SBX530WD-DG</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">123RE63</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">Điện máy xanh</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">18/04/2016</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">01/01/2024</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">
+                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
+                    </td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">
+                        <a href="#" class="underline">Xem ngay</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-2 border border-gray-300 text-left">1</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">SJ-SBX530WD-DG</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">123RE63</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">Điện máy xanh</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">18/04/2016</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">01/01/2024</td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">
+                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
+                    </td>
+                    <td class="px-4 py-2 border border-gray-300 text-left">
+                        <a href="#" class="underline">Xem ngay</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="block md:hidden">
+            <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
+                <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
+                <div>
+                    <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
+                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
+                </div>
+            </div>
+            <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
+                <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
+                <div>
+                    <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
+                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
+                </div>
+            </div>
+            <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
+                <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
+                <div>
+                    <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
+                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
+                </div>
+            </div>
+            <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
+                <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
+                <div>
+                    <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
+                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
+                </div>
+            </div>
+            <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
+                <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
+                <div>
+                    <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
+                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
+                </div>
+            </div>
+            <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
+                <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
+                <div>
+                    <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
+                    <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
+                </div>
+            </div>
+        </div>
     </main>
+    <div class="nav-bar fixed bottom-0 left-0 right-0 w-full bg-white border-t border-[--primary-color]">
+        <div class="flex items-center justify-between gap-4 w-full py-4 px-8">
+            <div class="icon">
+                <img src="../img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Trang chủ</span>
+            </div>
+            <div class="icon">
+                <img src="../img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Tài khoản</span>
+            </div>
+            <div class="icon">
+                <img src="../img/icon_list.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Danh mục</span>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer_top bg-[--bg-dark] lg:px-8 px-4 py-4">
@@ -203,7 +263,7 @@
                         <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
                         <span>Tel: 1800 1599</span>
                     </div>
-                    <div class="lg:col-span-6 col-span-12 text-white lg:border-l lg:border-r">
+                    <div class="lg:col-span-6 col-span-12 text-white lg:border-l lg:border-r py-8 md:py-0">
                         <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
                             <span>callcenter@svn.sharp-world.com</span>
@@ -222,7 +282,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer_bottom bg-white p-8">
+        <div class="footer_bottom bg-white md:p-8 p-4">
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-12 lg:col-span-3">
