@@ -15,16 +15,15 @@
                 </div>
                 <div class="flex gap-4 items-center">
                     <div class="flex items-center gap-4">
-                        <h2 class="text-xl bg-[--primary-color] px-16 py-2 text-white">ĐĂNG NHẬP</h2>
+                        <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white">ĐĂNG NHẬP</h2>
                         <div class="w-2 min-h-12 bg-[--primary-color]"></div>
                         <div class="quick_link flex item-center gap-2">
                             <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg" width="24" alt=""></a>
                             <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg" width="24" alt=""></a>
                         </div>
                     </div>
-                    <div class="lang flex items-center gap-4">
-                        <img src="../img/icon_lang.svg" width="24" alt="">
-                        <span class="text-base decoration-solid">Tiếng Việt</span>
+                    <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4">
+                        <span class="text-sm uppercase">Tiếng Việt</span>
                     </div>
                 </div>
             </div>
@@ -33,49 +32,99 @@
             <div class="main-wrap mx-auto overflow-hidden h-screen md:h-auto">
                 <div class="grid grid-cols-12 gap-0 md:gap-4">
                     <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center md:pt-8 md:pb-32 h-screen md:h-auto">
-                        <div class="md:w-96 w-full h-full md:h-auto mx-auto bg-white md:border-solid md:border box-shadow md:p-8 px-4 py-16 md:block flex justify-between flex-col">
+                        <div class="md:w-96 w-full h-full md:h-auto mx-auto md:p-8 px-4 py-16 md:block flex justify-between flex-col">
                             <div class="login-top">
                                 <h2 class="text-2xl font-bold mb-2">Đăng Nhập</h2>
                                 <span class="text-sm font-light block">Đăng nhập tài khoản của bạn</span>
-                                <div class="form-control mt-6 mb-6">
-                                    <label for="" class="mb-2 block font-light text-sm">Số điện thoại</label>
-                                    <input type="text" class="border border-[--border-color] block rounded-md w-full px-4 py-3" placeholder="Số điện thoại...">
+                                <div class="flex items-center justify-between mt-4">
+                                    <div class="flex items-center gap-2 justify-end">
+                                        <input type="radio" name="loginType" id="phone" value="phone">
+                                        <label for="phone" class="text-light text-sm">Số điện thoại</label>
+                                    </div>
+                                    <div class="flex items-center gap-2 justify-end">
+                                        <input type="radio" name="loginType" id="email" value="email">
+                                        <label for="email" class="text-light text-sm">Địa chỉ email</label>
+                                    </div>
                                 </div>
-                                <div class="flex items-center gap-4 justify-end">
+                                <div class="form-control mt-4 mb-4">
+                                    <input type="text" class="border border-[--border-color] block w-full px-4 py-3" id="login-input" placeholder="Số điện thoại...">
+                                </div>
+                                <div class="flex items-center gap-2 justify-end">
                                     <input type="checkbox" name="" id="">
                                     <label for="" class="text-light text-sm">Ghi nhớ</label>
                                 </div>
                             </div>
-                            <div class="login-bottom mt-8">
-                                <a href="login.html" class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:bg-[--hover-bg] duration-300">
-                                    Đăng nhập
+                            <div class="login-bottom text-center mt-8">
+                                <a href="javascript:void(0);" id="otp-btn" class="inline-flex items-center justify-center gap-4 bg-[--primary-color] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                                    Nhận mã OTP
                                 </a>
-                                <a href="login_email.html" class="text-center block mt-4 text-sm">Đăng nhập bằng email</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+        <div id="overlay" class="overlay">
+            <div class="modal bg-[--bg-modal-color] text-left p-2">
+                <div class="modal-content border border-white p-8">
+                    <div class="w-3/4 mx-auto">
+                        <h3 class="text-xl font-bold mb-4 text-center">Cách thức nhận mã OTP</h3>
+                        <span class="text-sm font-light block mb-4 text-center">Bạn muốn nhận mã OTP qua đâu</span>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center gap-2 justify-start w-28">
+                                <input type="radio" name="otpType" id="zalo" value="zalo">
+                                <label for="zalo" class="text-light text-sm">Số zalo</label>
+                            </div>
+                            <div class="form-control flex-1">
+                                <input type="text" class="border border-[--border-color] block w-full px-4 py-3" id="login-input" placeholder="Số điện thoại...">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center gap-2 justify-start w-28">
+                                <input type="radio" name="otpType" id="phone_modal" value="phone_modal">
+                                <label for="phone_modal" class="text-light text-sm">Số điện thoại</label>
+                            </div>
+                            <div class="form-control flex-1">
+                                <input type="text" class="border border-[--border-color] block w-full px-4 py-3" id="login-input" placeholder="Số điện thoại...">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center gap-2 justify-start w-28">
+                                <input type="radio" name="otpType" id="email_modal" value="email_modal">
+                                <label for="email_modal" class="text-light text-sm">Địa chỉ email</label>
+                            </div>
+                            <div class="form-control flex-1">
+                                <input type="text" class="border border-[--border-color] block w-full px-4 py-3" id="login-input" placeholder="Số điện thoại...">
+                            </div>
+                        </div>
+                        <div class="login-bottom text-center mt-8">
+                            <a href="javascript:void(0);" id="otp-btn" class="inline-flex items-center justify-center gap-4 bg-[--primary-color] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                                Tiếp tục
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer>
-            <div class="footer_top bg-[--bg-dark] lg:px-8 px-4 py-4">
+            <div class="footer_top bg-[--bg-footer-top] lg:px-8 px-4 py-4">
                 <div class="main-wrap mx-auto">
                     <div class="grid grid-cols-12 gap-4 md:gap-4">
-                        <div class="col-span-12 lg:col-span-3 text-white">
+                        <div class="col-span-12 lg:col-span-3 text-black">
                             <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
                             <span>Tel: 1800 1599</span>
                         </div>
-                        <div class="lg:col-span-6 col-span-12 text-white lg:border-l lg:border-r py-8 md:py-0">
+                        <div class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-black py-8 md:py-0">
                             <div class=" w-full lg:w-1/2 mx-auto">
                                 <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
                                 <span>callcenter@svn.sharp-world.com</span>
                             </div>
                         </div>
-                        <div class="col-span-12 lg:col-span-3 text-white">
+                        <div class="col-span-12 lg:col-span-3 text-black">
                             <div class="w-full lg:w-2/3 ml-auto">
                                 <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
                                 <div class="flex gap-4 items-center justify-start">
-                                    <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.png" alt="" class="w-6 h-6"></a>
+                                    <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.svg" alt="" class="w-6 h-6"></a>
                                     <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt="" class="w-6 h-6"></a>
                                     <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img src="../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
                                 </div>
@@ -84,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer_bottom bg-white md:p-8 p-4">
+            <div class="footer_bottom bg-[--bg-footer-bottom] md:p-8 p-4">
                 <div class="main-wrap mx-auto">
                     <div class="grid grid-cols-12 gap-4 md:gap-4">
                         <div class="col-span-12 lg:col-span-3">
@@ -95,8 +144,7 @@
                                 <br>Do sở KH&ĐT cấp ngày 13/3/2009
                             </span>
                             <a href="#" class="flex gap-4">
-                                <img src="../img/icon_phone.svg" alt="" class="w-6 h-6">
-                                <span>Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
+                                <span>Hotline: <b class="text-[--link-color]">1-800-1599</b> (Miễn phí)</span>
                             </a>
                         </div>
                         <div class="col-span-12 lg:col-span-6 text-white">
@@ -145,4 +193,27 @@
             </div>
         </footer>
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.getElementById('phone').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('login-input').placeholder = "Số điện thoại...";
+            }
+        });
+    
+        document.getElementById('email').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('login-input').placeholder = "Địa chỉ email...";
+            }
+        });
+        $(document).ready(function () {
+            $('#otp-btn').on('click', function () {
+                $('#overlay').addClass('show');
+            });
+
+            $('#close-btn').on('click', function () {
+                $('#overlay').removeClass('show');
+            });
+        });
+    </script>
 </html>

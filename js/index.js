@@ -54,6 +54,6 @@ function setupDropdown(dropdownId, dropdownBtnId, dropdownTextId, dropdownListId
 
 // Setup dropdowns for product type and product name
 document.addEventListener('DOMContentLoaded', () => {
-    setupDropdown('dropdown', 'dropdown-btn', 'dropdown-text', 'dropdown-list');
+    // setupDropdown('dropdown', 'dropdown-btn', 'dropdown-text', 'dropdown-list');
     setupDropdown('dropdown_tensanpham', 'dropdown-btn_tensanpham', 'dropdown-text_tensanpham', 'dropdown-list_tensanpham');
 });

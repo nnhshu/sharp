@@ -11,37 +11,34 @@
 
 <body>
     <header class="border-b hidden md:block">
-        <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid">
+        <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
             <div class="logo">
                 <img src="../img/logo-sharp.svg" width="130" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
-                    <h2 class="text-xl bg-[--primary-color] px-16 py-2 text-white">TRA CỨU BẢO HÀNH</h2>
+                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white">TRA CỨU BẢO HÀNH</h2>
                     <div class="w-2 min-h-12 bg-[--primary-color]"></div>
-                    <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg"
-                        width="24" alt=""></a>
-                    <div class="quick_link flex items-center gap-2 relative min-w-11">
-                        <a href="javascript:void(0)" onclick="toggleSearchInput()" class="w-11 h-11 flex items-center justify-center absolute">
-                            <img src="../img/icon_s_red.svg" width="24" alt="Search">
-                        </a>
-                        <input id="search-input" type="text" class="hidden px-4 py-2 border border-gray-300 rounded pl-11" placeholder="Nhập từ khóa...">
+                    <div class="quick_link flex item-center gap-2">
+                        <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg"
+                                width="24" alt=""></a>
+                        <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg"
+                                width="24" alt=""></a>
                     </div>
                 </div>
-                <div class="lang flex items-center gap-4">
-                    <img src="../img/icon_lang.svg" width="24" alt="">
-                    <span class="text-base decoration-solid">Tiếng Việt</span>
+                <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4">
+                    <span class="text-sm uppercase">Tiếng Việt</span>
                 </div>
             </div>
         </div>
     </header>
-    
     <div class="container-full px-4 hidden md:block">
         <div class="grid grid-cols-12">
             <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
-                <span>Bảo hành sản phẩm</span>
                 <img src="../img/icon_down.svg" width="24" alt="">
-                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg border-t-2 border-[--primary-color] mt-8 w-full">
+                <span>Bảo hành sản phẩm</span>
+                <div
+                    class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg mt-8 w-full">
                     <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Danh sách sản phẩm</a>
                     <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Kích hoạt bảo hành</a>
                     <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Tra cứu bảo hành</a>
@@ -51,26 +48,38 @@
                 </div>
             </div>
             <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
-                <span>Thông tin sản phẩm</span>
                 <img src="../img/icon_down.svg" width="24" alt="">
-                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg border-t-2 border-[--primary-color] mt-8 w-full">
-                    <a href="https://vn.sharp/thiet-bi-nghe-nhin" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết bị nghe nhìn</a>
-                    <a href="https://vn.sharp/dieu-hoa-may-loc-khi" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Điều Hòa & Máy Lọc Khí</a>
-                    <a href="https://vn.sharp/thiet-bi-gia-dung" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết Bị Gia Dụng</a>
-                    <a href="https://vn.sharp/thiet-bi-nha-bep" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết Bị Nhà Bếp</a>
-                    <a href="https://vn.sharp/cham-soc-ca-nhan" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Chăm sóc cá nhân</a>
-                    <a href="https://vn.sharp/products/thiet-bi-van-phong" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết bị văn phòng</a>
-                    <a href="https://vn.sharp/gallery" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Gallery</a>
+                <span>Thông tin sản phẩm</span>
+                <div
+                    class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg mt-8 w-full">
+                    <a href="https://vn.sharp/thiet-bi-nghe-nhin"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết bị nghe nhìn</a>
+                    <a href="https://vn.sharp/dieu-hoa-may-loc-khi"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Điều Hòa & Máy Lọc Khí</a>
+                    <a href="https://vn.sharp/thiet-bi-gia-dung"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết Bị Gia Dụng</a>
+                    <a href="https://vn.sharp/thiet-bi-nha-bep"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết Bị Nhà Bếp</a>
+                    <a href="https://vn.sharp/cham-soc-ca-nhan"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Chăm sóc cá nhân</a>
+                    <a href="https://vn.sharp/products/thiet-bi-van-phong"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết bị văn phòng</a>
+                    <a href="https://vn.sharp/gallery"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Gallery</a>
                 </div>
             </div>
 
             <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
-                <span>Mua hàng online</span>
                 <img src="../img/icon_down.svg" width="24" alt="">
-                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg border-t-2 border-[--primary-color] mt-8 w-full">
-                    <a href="https://www.lazada.vn/shop/sharp-flagship-store" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Lazada Sharp Flagship Store</a>
-                    <a href="https://shopee.vn/sharp_official_store" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Shopee Sharp Official Store</a>
-                    <a href="https://www.cocorolife.vn/" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Cocorolife</a>
+                <span>Mua hàng online</span>
+                <div
+                    class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg mt-8 w-full">
+                    <a href="https://www.lazada.vn/shop/sharp-flagship-store"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Lazada Sharp Flagship Store</a>
+                    <a href="https://shopee.vn/sharp_official_store"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Shopee Sharp Official Store</a>
+                    <a href="https://www.cocorolife.vn/"
+                        class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Cocorolife</a>
                 </div>
             </div>
         </div>
@@ -83,25 +92,25 @@
             <div class="grid grid-cols-12 gap-0 md:gap-4 h-">
                 <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center pt-8 pb-16">
                     <div
-                        class="relative w-1/2 mx-auto bg-white md:border-solid md:border md:p-8 md:block flex justify-between flex-col">
+                        class="relative w-1/2 mx-auto md:p-8 md:block flex justify-between flex-col">
                         <div class="login-top">
-                            <h2 class="text-2xl font-bold mb-2">Tra cứu bảo hành điện tử</h2>
-                            <span class="text-sm font-light block">Tất cả sản phẩm Sharp được kích hoạt bảo hành điện tử
-                                ngay sau khi mua.</span>
-                            <span class="text-sm font-light block mb-8">Quý khách vui lòng yêu cầu nơi bán (đại lý, cửa hàng)
-                                kích hoạt bảo hành điện tử và có thể kiểm tra thời gian bảo hành thông qua số seri của sản
-                                phẩm tại đây:</span>
-                            <div>
+                            <h2 class="text-2xl font-bold mb-4 uppercase text-center">Tra cứu bảo hành điện tử</h2>
+                            <span class="text-sm text-center block">Tất cả sản phẩm Sharp được kích hoạt bảo hành điện tử
+                                ngay sau khi mua. Quý khách vui lòng yêu cầu nơi bán (đại lý, cửa  hàng)
+                                kích hoạt bảo hành điện tử và có thể kiểm tra thời gian bảo hành thông qua số seri của
+                                sản phẩm tại đây:</span>
+                            <div class="mt-8">
                                 <div class="form-control">
-                                    <label for="product" class="mb-2 block font-semibold text-sm">Loại sản phẩm</label>
-                                    <div class="dropdown" id="dropdown">
+                                    <label for="product" class="mb-2 block font-semibold text-base">Loại sản phẩm</label>
+                                    <div class="dropdown border border-[--border-color] bg-white" id="dropdown">
                                         <div class="dropdown-btn" id="dropdown-btn">
                                             <span id="dropdown-text">Chọn loại sản phẩm</span>
                                             <span><img src="../img/arrow_down.svg" class="w-4 h-4" alt=""></span>
                                         </div>
                                         <ul class="dropdown-list" id="dropdown-list">
                                             <div class="dropdown-group">
-                                                <div class="dropdown-group-title p-4 text-[--primary-color] border-b">THIẾT BỊ NHÀ BẾP</div>
+                                                <div class="dropdown-group-title p-4 text-[--primary-color] border-b">
+                                                    THIẾT BỊ NHÀ BẾP</div>
                                                 <li class="p-4" data-value="1">Nồi cơm điện</li>
                                                 <li class="p-4" data-value="2">Bình thuỷ</li>
                                                 <li class="p-4" data-value="3">Lò nướng điện</li>
@@ -109,7 +118,8 @@
                                                 <li class="p-4" data-value="5">Nồi chiên không dầu</li>
                                             </div>
                                             <div class="dropdown-group">
-                                                <div class="dropdown-group-title p-4 text-[--primary-color] border-b">THIẾT BỊ GIA DỤNG</div>
+                                                <div class="dropdown-group-title p-4 text-[--primary-color] border-b">
+                                                    THIẾT BỊ GIA DỤNG</div>
                                                 <li class="p-4" data-value="6">Máy giặt</li>
                                                 <li class="p-4" data-value="7">Tủ lạnh</li>
                                                 <li class="p-4" data-value="8">Quạt</li>
@@ -118,8 +128,8 @@
                                     </div>
                                 </div>
                                 <div class="form-control mt-4">
-                                    <label for="city" class="mb-2 block font-semibold text-sm">Tên sản phẩm</label>
-                                    <div class="dropdown" id="dropdown_tensanpham">
+                                    <label for="city" class="mb-2 block font-semibold text-base">Tên sản phẩm</label>
+                                    <div class="dropdown border border-[--border-color] bg-white" id="dropdown_tensanpham">
                                         <div class="dropdown-btn" id="dropdown-btn_tensanpham">
                                             <span id="dropdown-text_tensanpham">Chọn sản phẩm</span>
                                             <span><img src="../img/arrow_down.svg" class="w-4 h-4" alt=""></span>
@@ -136,9 +146,9 @@
                                     </div>
                                 </div>
                                 <div class="form-control mt-4">
-                                    <label for="phone" class="mb-2 block font-semibold text-sm">Số serial</label>
+                                    <label for="phone" class="mb-2 block font-semibold text-base">Số serial</label>
                                     <input id="phone" type="text"
-                                        class="border border-[--border-color] block rounded-md w-full px-4 py-3"
+                                        class="border border-[--border-color] block w-full px-4 py-3"
                                         placeholder="VD:928EWW8242412">
                                 </div>
                                 <div class="flex justify-end mt-8">
@@ -146,36 +156,39 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="login-bottom mt-8">
-                            <button id="confirm-btn"
-                                class="flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:bg-[--hover-bg] duration-300">
-                                <span id="btn-text">Tra cứu</span>
+                        <div class="login-bottom mt-8 flex items-center justify-center gap-8">
+                            <button class="flex items-center justify-center gap-4 bg-[--bg-button-back] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                              <span id="btn-text">Nhập lại</span>
                             </button>
-                        </div>
+                            <button id="confirm-btn"
+                              class="flex items-center justify-center gap-4 bg-[--primary-color] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                              <span id="btn-text">Tra cứu</span>
+                            </button>
+                          </div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
     <footer>
-        <div class="footer_top bg-[--bg-dark] lg:px-8 px-4 py-4">
+        <div class="footer_top bg-[--bg-footer-top] lg:px-8 px-4 py-4">
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
-                    <div class="col-span-12 lg:col-span-3 text-white">
+                    <div class="col-span-12 lg:col-span-3 text-black">
                         <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
                         <span>Tel: 1800 1599</span>
                     </div>
-                    <div class="lg:col-span-6 col-span-12 text-white lg:border-l lg:border-r py-8 md:py-0">
+                    <div class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-black py-8 md:py-0">
                         <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
                             <span>callcenter@svn.sharp-world.com</span>
                         </div>
                     </div>
-                    <div class="col-span-12 lg:col-span-3 text-white">
+                    <div class="col-span-12 lg:col-span-3 text-black">
                         <div class="w-full lg:w-2/3 ml-auto">
                             <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
                             <div class="flex gap-4 items-center justify-start">
-                                <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.png" alt="" class="w-6 h-6"></a>
+                                <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.svg" alt="" class="w-6 h-6"></a>
                                 <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt="" class="w-6 h-6"></a>
                                 <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img src="../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
                             </div>
@@ -184,7 +197,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer_bottom bg-white md:p-8 p-4">
+        <div class="footer_bottom bg-[--bg-footer-bottom] md:p-8 p-4">
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-12 lg:col-span-3">
@@ -195,8 +208,7 @@
                             <br>Do sở KH&ĐT cấp ngày 13/3/2009
                         </span>
                         <a href="#" class="flex gap-4">
-                            <img src="../img/icon_phone.svg" alt="" class="w-6 h-6">
-                            <span>Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
+                            <span>Hotline: <b class="text-[--link-color]">1-800-1599</b> (Miễn phí)</span>
                         </a>
                     </div>
                     <div class="col-span-12 lg:col-span-6 text-white">
@@ -243,34 +255,38 @@
                 </div>
             </div>
         </div>
-    </footer>
+      </footer>
     <div id="overlay" class="overlay">
-        <div class="modal text-left">
-            <h3 class="text-xl font-bold mb-4">Không tìm thấy sản phẩm</h3>
-            <span class="text-sm font-light block mb-8">Hiện tại, Sharp Việt Nam không tìm thấy thông tin sản phẩm của Quý khách trong dữ liệu sản phẩm.</span>
-            <span class="text-sm font-bold block mb-4">Nguyên nhân có thể do:</span>
-            <ul class="list-disc">
-                <li class="text-sm font-light block mb-4 pl-2">Tên sản phẩm chưa được cung cấp chính xác</li>
-                <li class="text-sm font-light block mb-4 pl-2">Số Serial sản phẩm chưa được nhập đúng</li>
+        <div class="modal bg-[--bg-modal-color] text-left p-2">
+            <div class="modal-content border border-white p-8">
+            <h3 class="text-2xl font-bold mb-4 text-center uppercase">“KÍNH CHÀO QUÝ KHÁCH"</h3>
+            <span class="text-sm block mb-8">Hiện tại, Sharp Việt Nam không tìm thấy thông tin sản phẩm của Quý khách trong dữ liệu sản phẩm.</span>
+            <span class="text-sm font-bold block mb-2">Nguyên nhân có thể do:</span>
+            <ul class="list-disc mb-8">
+                <li class="text-sm block mb-2 pl-4">Tên sản phẩm chưa được cung cấp chính xác</li>
+                <li class="text-sm block pl-4">Số Serial sản phẩm chưa được nhập đúng</li>
             </ul>
-            <span class="text-sm font-light block mb-4">Quý khách vui lòng kiểm tra lại thông tin và thử lại. </span>
-            <span class="text-sm font-light block mb-4">Nếu cần hỗ trợ , xin vui lòng liên hệ với Sharp Việt Nam qua:</span>
-            <a href="#" class="flex gap-4 mb-4">
+            <span class="text-sm block mb-4">Quý khách vui lòng kiểm tra lại thông tin và thử lại. </span>
+            <span class="text-sm block mb-4">Nếu cần hỗ trợ , xin vui lòng liên hệ với Sharp Việt Nam qua:</span>
+            <a href="#" class="flex gap-2 mb-4">
                 <img src="../img/icon_phone.svg" alt="" class="w-6 h-6">
-                <span class="text-sm block">Hotline: <b class="text-[--primary-color]">1-800-1599</b> (Miễn phí)</span>
+                <span class="text-sm block">Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
             </a>
-            <a href="#" class="flex gap-4 mb-4">
+            <a href="#" class="flex gap-2">
                 <img src="../img/email.svg" alt="" class="w-6 h-6">
-                <span class="text-sm block">callcenter@svn.sharp-world.com</span>
+                <span class="text-sm block font-bold">callcenter@svn.sharp-world.com</span>
             </a>
-            <div class="">
-                <span class="text-sm font-light block mb-2">Trân trọng,</span>
-                <span class="text-sm font-light block mb-2"><b>Sharp Việt Nam</b></span>
+            <div class="mt-8">
+                <span class="text-sm block mb-2">Trân trọng,</span>
+                <span class="text-sm font-bold block mb-2"><b>Sharp Việt Nam</b></span>
             </div>
-            <button id="close-btn"
-                class="mt-8 flex items-center justify-center gap-4 btn-main bg-[--primary-color] w-full py-2 text-white rounded-md transition ease-in-out hover:bg-[--hover-bg] duration-300">
-                <span id="btn-text">Quay lại</span>
-            </button>
+            <div class="flex items-center justify-center mt-8">
+                <button id="close-btn"
+                    class="flex items-center justify-center gap-4 bg-[--primary-color] px-8 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                    <span id="btn-text">Quay lại</span>
+                </button>
+            </div>
+        </div>
         </div>
     </div>
 
