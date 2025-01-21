@@ -17,17 +17,23 @@
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
-                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white">ĐĂNG KÝ SỬA CHỮA</h2>
+                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white uppercase">ĐĂNG KÝ SỬA CHỮA</h2>
                     <div class="w-2 min-h-12 bg-[--primary-color]"></div>
                     <div class="quick_link flex item-center gap-2">
                         <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg"
                                 width="24" alt=""></a>
+                                <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/User.svg"
+                                    width="24" alt=""></a>
                         <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg"
                                 width="24" alt=""></a>
                     </div>
                 </div>
-                <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4">
+                <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
                     <span class="text-sm uppercase">Tiếng Việt</span>
+                    <div class="dropdown-content absolute left-0 top-0 hidden bg-white shadow-lg mt-6 w-full">
+                        <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">TIẾNG VIỆT</a>
+                        <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">ENGLISH</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,19 +128,19 @@
                                     <label for="phone" class="mb-2 block font-semibold text-base">Số serial</label>
                                     <input id="phone" type="text"
                                         class="border border-[--border-color] block w-full px-4 py-3"
-                                        placeholder="Số serial...">
+                                        placeholder="VD:928EWW8242412">
                                 </div>
                                 <div class="form-control mt-4">
                                     <label for="phone" class="mb-2 block font-semibold text-base">Địa chỉ (nơi sản phẩm đang yêu cầu bảo hành)</label>
                                     <input id="phone" type="text"
                                         class="border border-[--border-color] block w-full px-4 py-3"
-                                        placeholder="Nhập địa chỉ...">
+                                        placeholder="Nhập địa chỉ">
                                 </div>
                                 <div class="form-control mt-4">
-                                    <label for="date" class="mb-2 block font-semibold text-base">Ngày mua hàng</label>
-                                    <input id="date" type="date"
+                                    <label for="phone" class="mb-2 block font-semibold text-base">Số điện thoại</label>
+                                    <input id="phone" type="text"
                                         class="border border-[--border-color] block w-full px-4 py-3"
-                                        placeholder="Ngày mua hàng...">
+                                        placeholder="Nhập số điện thoại">
                                 </div>
                                 <div class="form-control mt-4">
                                     <label for="username" class="mb-2 block font-semibold text-base">Tình trạng sản phẩm/yêu cầu khác</label>

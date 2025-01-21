@@ -13,21 +13,27 @@
     <header class="border-b hidden md:block">
         <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
             <div class="logo">
-                <img src="../../img/logo-sharp.svg" width="130" alt="">
+                <img src="../img/logo-sharp.svg" width="130" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
-                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white">KÍCH HOẠT BẢO HÀNH</h2>
+                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white">CẬP NHẬT THÔNG TIN</h2>
                     <div class="w-2 min-h-12 bg-[--primary-color]"></div>
                     <div class="quick_link flex item-center gap-2">
                         <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../../img/icon_h.svg"
                                 width="24" alt=""></a>
+                                <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../../img/User.svg"
+                                    width="24" alt=""></a>
                         <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../../img/icon_s_red.svg"
                                 width="24" alt=""></a>
                     </div>
                 </div>
-                <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4">
+                <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
                     <span class="text-sm uppercase">Tiếng Việt</span>
+                    <div class="dropdown-content absolute left-0 top-0 hidden bg-white shadow-lg mt-6 w-full">
+                        <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">TIẾNG VIỆT</a>
+                        <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">ENGLISH</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,32 +104,32 @@
                 <div
                     class="w-44 h-44 flex flex-col item-center gap-4 justify-center border border-white rounded-lg p-4 hover:border-[--primary-color]">
                     <img src="../../img/qr.svg" class="w-16 h-16 mx-auto" alt="">
-                    <span class="font-medium text-center">Quét mã <br>đăng ký</span>
+                    <span class="font-medium text-center">Quét mã đăng ký</span>
                 </div>
                 <div
                     class="w-44 h-44 flex flex-col item-center gap-4 justify-center border border-white rounded-lg p-4 hover:border-[--primary-color]">
                     <img src="../../img/register.svg" class="w-16 h-16 mx-auto" alt="">
-                    <span class="font-medium text-center">Đăng ký <br>thủ công</span>
+                    <span class="font-medium text-center">Đăng ký thủ công</span>
                 </div>
             </div>
         </main>
     </div>
 
     <footer>
-        <div class="footer_top bg-[--bg-dark] lg:px-8 px-4 py-4">
+        <div class="footer_top bg-[--bg-footer-top] lg:px-8 px-4 py-4">
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
-                    <div class="col-span-12 lg:col-span-3 text-white">
+                    <div class="col-span-12 lg:col-span-3 text-black">
                         <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
                         <span>Tel: 1800 1599</span>
                     </div>
-                    <div class="lg:col-span-6 col-span-12 text-white lg:border-l lg:border-r py-8 md:py-0">
+                    <div class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-black py-8 md:py-0">
                         <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
                             <span>callcenter@svn.sharp-world.com</span>
                         </div>
                     </div>
-                    <div class="col-span-12 lg:col-span-3 text-white">
+                    <div class="col-span-12 lg:col-span-3 text-black">
                         <div class="w-full lg:w-2/3 ml-auto">
                             <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
                             <div class="flex gap-4 items-center justify-start">
@@ -136,7 +142,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer_bottom bg-white md:p-8 p-4">
+        <div class="footer_bottom bg-[--bg-footer-bottom] md:p-8 p-4">
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-12 lg:col-span-3">
@@ -147,8 +153,7 @@
                             <br>Do sở KH&ĐT cấp ngày 13/3/2009
                         </span>
                         <a href="#" class="flex gap-4">
-                            <img src="../../img/icon_phone.svg" alt="" class="w-6 h-6">
-                            <span>Hotline: <b class="text-[--primary-color] underline">1-800-1599</b> (Miễn phí)</span>
+                            <span>Hotline: <b class="text-[--link-color]">1-800-1599</b> (Miễn phí)</span>
                         </a>
                     </div>
                     <div class="col-span-12 lg:col-span-6 text-white">
