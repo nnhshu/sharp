@@ -11,41 +11,41 @@
 </head>
 
 <body>
-    <header class="border-b hidden md:block">
+    <header class="border-b block">
         <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
-          <div class="logo">
-            <img src="../img/logo-sharp.svg" width="130" alt="">
-          </div>
-          <div class="flex gap-4 items-center">
-            <div class="flex items-center gap-4">
-              <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white">DANH SÁCH SẢN PHẨM</h2>
-              <div class="w-2 min-h-12 bg-[--primary-color]"></div>
-              <div class="quick_link flex item-center gap-2">
-                <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg" width="24"
-                    alt=""></a>
-                <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/User.svg" width="24"
-                    alt=""></a>
-                <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg" width="24"
-                    alt=""></a>
-              </div>
+            <div class="logo">
+                <img src="../img/logo-sharp.svg" width="130" alt="">
             </div>
-            <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
-              <span class="text-sm uppercase">Tiếng Việt</span>
-              <div class="dropdown-content absolute left-0 top-0 hidden bg-white shadow-lg mt-6 w-full">
-                <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">TIẾNG VIỆT</a>
-                <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">ENGLISH</a>
-              </div>
+            <div class="flex gap-4 items-center">
+                <div class="flex items-center gap-4">
+                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white md:block hidden">DANH SÁCH SẢN PHẨM</h2>
+                    <div class="w-2 min-h-12 bg-[--primary-color] md:block hidden"></div>
+                    <div class="quick_link flex item-center gap-2">
+                        <a href="/" class="w-11 h-11 flex items-center justify-center md:block hidden"><img
+                                src="../img/icon_h.svg" width="24" alt=""></a>
+                        <a href="#" class="w-11 h-11 flex items-center justify-center md:block hidden"><img
+                                src="../img/User.svg" width="24" alt=""></a>
+                        <a href="#" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg"
+                                width="24" alt=""></a>
+                    </div>
+                </div>
+                <div
+                    class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
+                    <span class="text-sm uppercase">Tiếng Việt</span>
+                    <div class="dropdown-content absolute left-0 top-0 hidden bg-white shadow-lg mt-6 w-full">
+                        <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">TIẾNG VIỆT</a>
+                        <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">ENGLISH</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </header>
+    </header>
     <div class="container-full px-4 hidden md:block">
         <div class="grid grid-cols-12">
             <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
                 <img src="../img/icon_down.svg" width="24" alt="">
                 <span>Bảo hành sản phẩm</span>
-                <div
-                    class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg mt-8 w-full">
+                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg mt-8 w-full">
                     <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Danh sách sản phẩm</a>
                     <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Kích hoạt bảo hành</a>
                     <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Tra cứu bảo hành</a>
@@ -57,8 +57,7 @@
             <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
                 <img src="../img/icon_down.svg" width="24" alt="">
                 <span>Thông tin sản phẩm</span>
-                <div
-                    class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg mt-8 w-full">
+                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg mt-8 w-full">
                     <a href="https://vn.sharp/thiet-bi-nghe-nhin"
                         class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Thiết bị nghe nhìn</a>
                     <a href="https://vn.sharp/dieu-hoa-may-loc-khi"
@@ -79,8 +78,7 @@
             <div class="col-span-4 flex items-center justify-center py-4 gap-4 relative group cursor-pointer">
                 <img src="../img/icon_down.svg" width="24" alt="">
                 <span>Mua hàng online</span>
-                <div
-                    class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg mt-8 w-full">
+                <div class="dropdown-content absolute left-0 top-4 hidden bg-white shadow-lg mt-8 w-full">
                     <a href="https://www.lazada.vn/shop/sharp-flagship-store"
                         class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Lazada Sharp Flagship Store</a>
                     <a href="https://shopee.vn/sharp_official_store"
@@ -91,135 +89,103 @@
             </div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner hidden lg:block">
         <img src="../img/banner_head_2.png" alt="" width="100%">
     </div>
-
     <div class="bg-[--bg-base]">
-        <main class="main-wrap mx-auto overflow-hidden h-screen md:h-auto lg:px-0 px-4 py-8">
-            <h3 class="text-2xl font-bold uppercase text-center block mb-8">Danh sách sản phẩm của tôi</h3>
-            <div class="hidden md:block">
-                <table class="min-w-full table-auto border-collapse border border-gray-300">
+        <main class="main-wrap mx-auto overflow-hidden md:h-auto lg:px-0 px-4 py-8">
+            <h2 class="text-2xl font-bold mb-4 uppercase text-center lg:block hidden">Danh sách sản phẩm của tôi</h2>
+            <h2 class="text-2xl font-bold mb-4 uppercase text-center lg:hidden block">Danh sách <br> sản phẩm của tôi</h2>
+            <div class="table-responsive">
+                <table class="min-w-full table-width table-auto border-collapse border border-gray-300">
                     <thead>
-                      <tr class="bg-gray-100">
-                        <th class="px-4 py-2 border border-gray-300 text-center font-medium">STT</th>
-                        <th class="px-4 py-2 border border-gray-300 text-center font-medium">Sản phẩm</th>
-                        <th class="px-4 py-2 border border-gray-300 text-center font-medium">Model</th>
-                        <th class="px-4 py-2 border border-gray-300 text-center font-medium">Số Seri</th>
-                        <th class="px-4 py-2 border border-gray-300 text-center font-medium">Nơi mua hàng / Cửa hàng</th>
-                        <th class="px-4 py-2 border border-gray-300 text-center font-medium">Ngày đăng ký bảo hành</th>
-                        <th class="px-4 py-2 border border-gray-300 text-center font-medium">Ngày hết hạn bảo hành</th>
-                        <th class="px-4 py-2 border border-gray-300 text-center font-medium">Tình trạng đăng ký bảo hành</th>
-                        <th class="px-4 py-2 border border-gray-300 text-center font-medium">HDSD</th>
-                      </tr>
+                        <tr class="bg-gray-100">
+                            <th class="px-4 py-2 border border-gray-300 text-center font-medium">STT</th>
+                            <th class="px-4 py-2 border border-gray-300 text-center font-medium">Sản phẩm</th>
+                            <th class="px-4 py-2 border border-gray-300 text-center font-medium">Model</th>
+                            <th class="px-4 py-2 border border-gray-300 text-center font-medium">Số Seri</th>
+                            <th class="px-4 py-2 border border-gray-300 text-center font-medium">Nơi mua hàng / Cửa hàng
+                            </th>
+                            <th class="px-4 py-2 border border-gray-300 text-center font-medium">Ngày đăng ký bảo hành
+                            </th>
+                            <th class="px-4 py-2 border border-gray-300 text-center font-medium">Ngày hết hạn bảo hành
+                            </th>
+                            <th class="px-4 py-2 border border-gray-300 text-center font-medium">Tình trạng đăng ký bảo
+                                hành</th>
+                            <th class="px-4 py-2 border border-gray-300 text-center font-medium">HDSD</th>
+                        </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td class="px-4 py-2 border border-gray-300 text-center">1</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">SJ-SBX530WD-DG</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">123RE63</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">Điện máy xanh</td>
-                        <td class="px-4 py-2 border border-gray-300 text-right">18/04/2016</td>
-                        <td class="px-4 py-2 border border-gray-300 text-right">01/01/2024</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">
-                            <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
-                        </td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">
-                            <a href="#" class="underline text-[--link-color]">Xem ngay</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-4 py-2 border border-gray-300 text-center">1</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">SJ-SBX530WD-DG</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">123RE63</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">Điện máy xanh</td>
-                        <td class="px-4 py-2 border border-gray-300 text-right">18/04/2016</td>
-                        <td class="px-4 py-2 border border-gray-300 text-right">01/01/2024</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">
-                            <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
-                        </td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">
-                            <a href="#" class="underline text-[--link-color]">Xem ngay</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-4 py-2 border border-gray-300 text-center">1</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">SJ-SBX530WD-DG</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">123RE63</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">Điện máy xanh</td>
-                        <td class="px-4 py-2 border border-gray-300 text-right">18/04/2016</td>
-                        <td class="px-4 py-2 border border-gray-300 text-right">01/01/2024</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">
-                            <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
-                        </td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">
-                            <a href="#" class="underline text-[--link-color]">Xem ngay</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-4 py-2 border border-gray-300 text-center">1</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">SJ-SBX530WD-DG</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">123RE63</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">Điện máy xanh</td>
-                        <td class="px-4 py-2 border border-gray-300 text-right">18/04/2016</td>
-                        <td class="px-4 py-2 border border-gray-300 text-right">01/01/2024</td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">
-                            <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt</span>
-                        </td>
-                        <td class="px-4 py-2 border border-gray-300 text-center">
-                            <a href="#" class="underline text-[--link-color]">Xem ngay</a>
-                        </td>
-                      </tr>
+                        <tr>
+                            <td class="px-4 py-2 border border-gray-300 text-center">1</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">Máy lạnh Sharp Inverter 1.5 HP
+                                AH-X13ZEW</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">SJ-SBX530WD-DG</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">123RE63</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">Điện máy xanh</td>
+                            <td class="px-4 py-2 border border-gray-300 text-right">18/04/2016</td>
+                            <td class="px-4 py-2 border border-gray-300 text-right">01/01/2024</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">
+                                <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích
+                                    hoạt</span>
+                            </td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">
+                                <a href="#" class="underline text-[--link-color]">Xem ngay</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border border-gray-300 text-center">1</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">Máy lạnh Sharp Inverter 1.5 HP
+                                AH-X13ZEW</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">SJ-SBX530WD-DG</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">123RE63</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">Điện máy xanh</td>
+                            <td class="px-4 py-2 border border-gray-300 text-right">18/04/2016</td>
+                            <td class="px-4 py-2 border border-gray-300 text-right">01/01/2024</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">
+                                <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích
+                                    hoạt</span>
+                            </td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">
+                                <a href="#" class="underline text-[--link-color]">Xem ngay</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border border-gray-300 text-center">1</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">Máy lạnh Sharp Inverter 1.5 HP
+                                AH-X13ZEW</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">SJ-SBX530WD-DG</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">123RE63</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">Điện máy xanh</td>
+                            <td class="px-4 py-2 border border-gray-300 text-right">18/04/2016</td>
+                            <td class="px-4 py-2 border border-gray-300 text-right">01/01/2024</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">
+                                <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích
+                                    hoạt</span>
+                            </td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">
+                                <a href="#" class="underline text-[--link-color]">Xem ngay</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border border-gray-300 text-center">1</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">Máy lạnh Sharp Inverter 1.5 HP
+                                AH-X13ZEW</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">SJ-SBX530WD-DG</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">123RE63</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">Điện máy xanh</td>
+                            <td class="px-4 py-2 border border-gray-300 text-right">18/04/2016</td>
+                            <td class="px-4 py-2 border border-gray-300 text-right">01/01/2024</td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">
+                                <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích
+                                    hoạt</span>
+                            </td>
+                            <td class="px-4 py-2 border border-gray-300 text-center">
+                                <a href="#" class="underline text-[--link-color]">Xem ngay</a>
+                            </td>
+                        </tr>
                     </tbody>
-                  </table>
-            </div>
-            <div class="block md:hidden">
-                <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
-                    <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
-                    <div>
-                        <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
-                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
-                    </div>
-                </div>
-                <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
-                    <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
-                    <div>
-                        <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
-                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
-                    </div>
-                </div>
-                <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
-                    <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
-                    <div>
-                        <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
-                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
-                    </div>
-                </div>
-                <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
-                    <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
-                    <div>
-                        <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
-                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
-                    </div>
-                </div>
-                <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
-                    <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
-                    <div>
-                        <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
-                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
-                    </div>
-                </div>
-                <div class="p-4 border border-[--border-color] rounded-md flex items-center gap-4 mb-4">
-                    <img src="../img/1_1.png" class="w-24 h-24 mx-auto" alt="">
-                    <div>
-                        <h3 class="block mb-4 font-bold">Máy lạnh Sharp Inverter 1.5 HP AH-X13ZEW</h3>
-                        <span class="bg-[--bg-tag] py-2 px-4 text-[--text-tag] rounded-full text-sm">Đã kích hoạt bảo hành</span>
-                    </div>
-                </div>
+                </table>
             </div>
         </main>
     </div>
@@ -239,16 +205,16 @@
             </div>
         </div>
     </div>
-
     <footer>
-        <div class="footer_top bg-[--bg-footer-top] lg:px-8 px-4 py-4">
+        <div class="footer_top bg-[--bg-footer-top] lg:px-8 lg:py-4  px-4 py-8">
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-12 lg:col-span-3 text-black">
                         <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
                         <span>Tel: 1800 1599</span>
                     </div>
-                    <div class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-black py-8 md:py-0">
+                    <div
+                        class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-black py-8 md:py-0">
                         <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
                             <span>callcenter@svn.sharp-world.com</span>
@@ -258,9 +224,12 @@
                         <div class="w-full lg:w-2/3 ml-auto">
                             <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
                             <div class="flex gap-4 items-center justify-start">
-                                <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.svg" alt="" class="w-6 h-6"></a>
-                                <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt="" class="w-6 h-6"></a>
-                                <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img src="../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
+                                <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.svg" alt=""
+                                        class="w-6 h-6"></a>
+                                <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt=""
+                                        class="w-6 h-6"></a>
+                                <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img
+                                        src="../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
                             </div>
                         </div>
                     </div>
@@ -271,8 +240,10 @@
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-12 lg:col-span-3">
-                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
-                        <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức, tp.hcm</span>
+                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM
+                        </h3>
+                        <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức,
+                            tp.hcm</span>
                         <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
                         <span class="block mb-4"><b>Mã số doanh nghiệp</b>: 0308159258
                             <br>Do sở KH&ĐT cấp ngày 13/3/2009
@@ -286,22 +257,28 @@
                             <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
                             <ul>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản phẩm</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản
+                                        phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản phẩm</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản
+                                        phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo hành</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo
+                                        hành</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa chữa</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa
+                                        chữa</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa chữa</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa
+                                        chữa</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật thông tin</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật
+                                        thông tin</a>
                                 </li>
                             </ul>
                         </div>
@@ -311,13 +288,16 @@
                             <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
                             <ul>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo hành uỷ quyền</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo
+                                        hành uỷ quyền</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến phản hồi</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến
+                                        phản hồi</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp ý</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp
+                                        ý</a>
                                 </li>
                             </ul>
                         </div>
@@ -325,8 +305,63 @@
                 </div>
             </div>
         </div>
-      </footer>
+    </footer>
+    <div class="nav-bar fixed bottom-0 left-0 right-0 w-full bg-white border-t border-[--primary-color] lg:hidden block">
+        <div class="flex items-center justify-between gap-4 w-full py-4 px-8">
+            <div class="icon">
+                <img src="../img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Trang chủ</span>
+            </div>
+            <div class="icon">
+                <img src="../img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Tài khoản</span>
+            </div>
+            <div class="icon" id="category">
+                <img src="../img/icon_list.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Danh mục</span>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-dropdown">
+        <div class="dropdown border border-[--border-color] bg-white" id="dropdown_category">
+            <ul class="dropdown-list">
+                <div class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
+                    <span class="font-bold">Danh mục</span>
+                    <img src="../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="" id="close-category">
+                </div>
+                <div class="dropdown-group">
+                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">BẢO HÀNH SẢN PHẨM</div>
+                    <li class="p-4" data-value="1">Danh sách sản phẩm</li>
+                    <li class="p-4" data-value="2">Kích hoạt bảo hành</li>
+                    <li class="p-4" data-value="3">Tra cứu bảo hành</li>
+                    <li class="p-4" data-value="4">Đăng ký sửa chữa</li>
+                    <li class="p-4" data-value="5">Tra cứu sửa chữa</li>
+                    <li class="p-4" data-value="6">Cập nhật thông tin</li>
+                </div>
+                <div class="dropdown-group">
+                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">THÔNG TIN SẢN PHẨM</div>
+                    <li class="p-4" data-value="7">Thiết bị nghe nhìn</li>
+                    <li class="p-4" data-value="8">Điều hoà & máy lọc khi</li>
+                    <li class="p-4" data-value="9">Thiết bị gia dụng</li>
+                    <li class="p-4" data-value="10">Thiết bị nhà bếp</li>
+                    <li class="p-4" data-value="11">Chăm sóc cá nhân</li>
+                </div>
+            </ul>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#category').click(() => {
+                $('#dropdown_category').addClass('open');
+                $('.overlay-dropdown').addClass('active');
+            })
+            $('#close-category').click(() => {
+                $('#dropdown_category').removeClass('open');
+                $('.overlay-dropdown').removeClass('active');
+            })
+        });
+    </script>
 </body>
 
 </html>

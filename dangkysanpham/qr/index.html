@@ -10,25 +10,26 @@
 </head>
 
 <body>
-    <header class="border-b hidden md:block">
+    <header class="border-b block">
         <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
             <div class="logo">
-                <img src="../img/logo-sharp.svg" width="130" alt="">
+                <img src="../../img/logo-sharp.svg" width="130" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
-                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white">KÍCH HOẠT BẢO HÀNH</h2>
-                    <div class="w-2 min-h-12 bg-[--primary-color]"></div>
+                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white md:block hidden">KÍCH HOẠT BẢO HÀNH</h2>
+                    <div class="w-2 min-h-12 bg-[--primary-color] md:block hidden"></div>
                     <div class="quick_link flex item-center gap-2">
-                        <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../../img/icon_h.svg"
-                                width="24" alt=""></a>
-                                <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../../img/User.svg"
-                                    width="24" alt=""></a>
-                        <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../../img/icon_s_red.svg"
+                        <a href="/" class="w-11 h-11 flex items-center justify-center md:block hidden"><img
+                                src="../../img/icon_h.svg" width="24" alt=""></a>
+                        <a href="#" class="w-11 h-11 flex items-center justify-center md:block hidden"><img
+                                src="../../img/User.svg" width="24" alt=""></a>
+                        <a href="#" class="w-11 h-11 flex items-center justify-center"><img src="../../img/icon_s_red.svg"
                                 width="24" alt=""></a>
                     </div>
                 </div>
-                <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
+                <div
+                    class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
                     <span class="text-sm uppercase">Tiếng Việt</span>
                     <div class="dropdown-content absolute left-0 top-0 hidden bg-white shadow-lg mt-6 w-full">
                         <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">TIẾNG VIỆT</a>
@@ -90,7 +91,7 @@
             </div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner hidden lg:block">
         <img src="../../img/banner_head.png" alt="" width="100%">
     </div>
     <div class="bg-[--bg-base]">
@@ -116,14 +117,15 @@
     </div>
 
     <footer>
-        <div class="footer_top bg-[--bg-footer-top] lg:px-8 px-4 py-4">
+        <div class="footer_top bg-[--bg-footer-top] lg:px-8 lg:py-4  px-4 py-8">
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-12 lg:col-span-3 text-black">
                         <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
                         <span>Tel: 1800 1599</span>
                     </div>
-                    <div class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-black py-8 md:py-0">
+                    <div
+                        class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-t-0 lg:border-b-0 lg:border-black border-b border-t border-black py-8 md:py-0">
                         <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
                             <span>callcenter@svn.sharp-world.com</span>
@@ -133,9 +135,12 @@
                         <div class="w-full lg:w-2/3 ml-auto">
                             <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
                             <div class="flex gap-4 items-center justify-start">
-                                <a href="https://zalo.me/3652092524472390581"><img src="../../img/zalo_footer.svg" alt="" class="w-6 h-6"></a>
-                                <a href="https://www.facebook.com/sharpvietnam"><img src="../../img/fb_footer.svg" alt="" class="w-6 h-6"></a>
-                                <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img src="../../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
+                                <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.svg" alt=""
+                                        class="w-6 h-6"></a>
+                                <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt=""
+                                        class="w-6 h-6"></a>
+                                <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img
+                                        src="../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
                             </div>
                         </div>
                     </div>
@@ -146,8 +151,10 @@
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-12 lg:col-span-3">
-                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
-                        <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức, tp.hcm</span>
+                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM
+                        </h3>
+                        <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức,
+                            tp.hcm</span>
                         <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
                         <span class="block mb-4"><b>Mã số doanh nghiệp</b>: 0308159258
                             <br>Do sở KH&ĐT cấp ngày 13/3/2009
@@ -161,22 +168,28 @@
                             <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
                             <ul>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản phẩm</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản
+                                        phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản phẩm</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản
+                                        phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo hành</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo
+                                        hành</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa chữa</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa
+                                        chữa</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa chữa</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa
+                                        chữa</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật thông tin</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật
+                                        thông tin</a>
                                 </li>
                             </ul>
                         </div>
@@ -186,13 +199,16 @@
                             <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
                             <ul>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo hành uỷ quyền</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo
+                                        hành uỷ quyền</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến phản hồi</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến
+                                        phản hồi</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp ý</a>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp
+                                        ý</a>
                                 </li>
                             </ul>
                         </div>
@@ -201,7 +217,62 @@
             </div>
         </div>
     </footer>
-
+    <div class="nav-bar fixed bottom-0 left-0 right-0 w-full bg-white border-t border-[--primary-color] lg:hidden block">
+        <div class="flex items-center justify-between gap-4 w-full py-4 px-8">
+            <div class="icon">
+                <img src="../../img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Trang chủ</span>
+            </div>
+            <div class="icon">
+                <img src="../../img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Tài khoản</span>
+            </div>
+            <div class="icon" id="category">
+                <img src="../../img/icon_list.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Danh mục</span>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-dropdown">
+        <div class="dropdown border border-[--border-color] bg-white" id="dropdown_category">
+            <ul class="dropdown-list">
+                <div class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
+                    <span class="font-bold">Danh mục</span>
+                    <img src="../../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="" id="close-category">
+                </div>
+                <div class="dropdown-group">
+                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">BẢO HÀNH SẢN PHẨM</div>
+                    <li class="p-4" data-value="1">Danh sách sản phẩm</li>
+                    <li class="p-4" data-value="2">Kích hoạt bảo hành</li>
+                    <li class="p-4" data-value="3">Tra cứu bảo hành</li>
+                    <li class="p-4" data-value="4">Đăng ký sửa chữa</li>
+                    <li class="p-4" data-value="5">Tra cứu sửa chữa</li>
+                    <li class="p-4" data-value="6">Cập nhật thông tin</li>
+                </div>
+                <div class="dropdown-group">
+                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">THÔNG TIN SẢN PHẨM</div>
+                    <li class="p-4" data-value="7">Thiết bị nghe nhìn</li>
+                    <li class="p-4" data-value="8">Điều hoà & máy lọc khi</li>
+                    <li class="p-4" data-value="9">Thiết bị gia dụng</li>
+                    <li class="p-4" data-value="10">Thiết bị nhà bếp</li>
+                    <li class="p-4" data-value="11">Chăm sóc cá nhân</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#category').click(() => {
+                $('#dropdown_category').addClass('open');
+                $('.overlay-dropdown').addClass('active');
+            })
+            $('#close-category').click(() => {
+                $('#dropdown_category').removeClass('open');
+                $('.overlay-dropdown').removeClass('active');
+            })
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../js/index.js"></script>
     <script>

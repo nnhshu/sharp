@@ -2,269 +2,286 @@
 <html lang="vi">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đăng nhập</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-  <header class="border-b hidden md:block">
-    <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
-      <div class="logo">
-        <img src="../img/logo-sharp.svg" width="130" alt="">
-      </div>
-      <div class="flex gap-4 items-center">
-        <div class="flex items-center gap-4">
-          <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white">MÃ OTP</h2>
-          <div class="w-2 min-h-12 bg-[--primary-color]"></div>
-          <div class="quick_link flex item-center gap-2">
-            <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg" width="24"
-                alt=""></a>
-            <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/User.svg" width="24"
-                alt=""></a>
-            <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg" width="24"
-                alt=""></a>
-          </div>
-        </div>
-        <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
-          <span class="text-sm uppercase">Tiếng Việt</span>
-          <div class="dropdown-content absolute left-0 top-0 hidden bg-white shadow-lg mt-6 w-full">
-            <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">TIẾNG VIỆT</a>
-            <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">ENGLISH</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="bg-[--bg-base]">
-    <main class="main-wrap mx-auto overflow-hidden h-screen md:h-auto">
-      <div class="grid grid-cols-12 gap-0 md:gap-4">
-        <div
-          class="md:col-span-12 col-span-12 flex flex-col item-center justify-center md:pt-8 md:pb-32 h-screen md:h-auto">
-          <div
-            class="md:w-1/2 w-full h-full md:h-auto mx-auto md:p-8 px-4 py-16 md:block flex justify-between flex-col">
-            <div id="loading-overlay"
-              class="overlay hidden absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
-              <div class="spinner-border border-4 border-t-transparent border-[--primary-color] w-10 h-10 rounded-full">
-              </div>
+    <header class="border-b block">
+        <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
+            <div class="logo">
+                <img src="../img/logo-sharp.svg" width="130" alt="">
             </div>
-            <div class="login-top">
-              <h2 class="text-2xl font-bold mb-8 uppercase text-center">Nhập mã OTP</h2>
-              <span class="text-sm block text-center">Mã OTP được gửi qua email <b
-                  class="font-bold">tenkhachhang@gmail.com</b> <br>Quý khách vui lòng kiểm tra và nhập mã OTP:</span>
-              <div class="otp-container mb-8 mt-4">
-                <span>Mã OTP</span>
-                <input type="text" class="otp-input" maxlength="1" id="otp-1">
-                <input type="text" class="otp-input" maxlength="1" id="otp-2">
-                <input type="text" class="otp-input" maxlength="1" id="otp-3">
-                <input type="text" class="otp-input" maxlength="1" id="otp-4">
-                <input type="text" class="otp-input" maxlength="1" id="otp-5">
-                <input type="text" class="otp-input" maxlength="1" id="otp-6">
-              </div>
-              <div id="error-message" class="error-message hidden text-[--primary-color] text-sm mt-2 mb-8">
-                <div class="flex items-center justify-center gap-2">
-                  <img src="../img/warning-circle.svg" width="20" alt=""> OTP không đúng, vui lòng nhập lại
+            <div class="flex gap-4 items-center">
+                <div class="flex items-center gap-4">
+                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white md:block hidden">MÃ OTP</h2>
+                    <div class="w-2 min-h-12 bg-[--primary-color] md:block hidden"></div>
+                    <div class="quick_link flex item-center gap-2">
+                        <a href="/" class="w-11 h-11 flex items-center justify-center md:block hidden"><img
+                                src="../img/icon_h.svg" width="24" alt=""></a>
+                        <a href="#" class="w-11 h-11 flex items-center justify-center md:block hidden"><img
+                                src="../img/User.svg" width="24" alt=""></a>
+                        <a href="#" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg"
+                                width="24" alt=""></a>
+                    </div>
                 </div>
-              </div>
-              <div id="timer-container" class="text-sm text-center mb-8">
-                <span>Thời gian mã OTP hết hiệu lực: <b id="timer">04:59</b></span>
-              </div>
-              <div id="resend-message" class="mt-4 text-sm cursor-pointer text-center">
-                Không nhận được mã? <b id="resend-link" class="font-bold underline">Gửi lại mã OTP</b>
-              </div>
-              <span class="text-center mt-2 block"><b>Lưu ý:</b> Không chia sẻ mã OTP với bất kỳ ai</span>
+                <div
+                    class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
+                    <span class="text-sm uppercase">Tiếng Việt</span>
+                    <div class="dropdown-content absolute left-0 top-0 hidden bg-white shadow-lg mt-6 w-full">
+                        <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">TIẾNG VIỆT</a>
+                        <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">ENGLISH</a>
+                    </div>
+                </div>
             </div>
-            <div class="login-bottom mt-8 flex items-center justify-center gap-8">
-              <button
-                class="flex items-center justify-center gap-4 bg-[--bg-button-back] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
-                <span id="btn-text">Quay lại</span>
-              </button>
-              <button id="confirm-btn"
-                class="flex items-center justify-center gap-4 bg-[--primary-color] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
-                <span id="btn-text">Xác nhận</span>
-              </button>
+        </div>
+    </header>
+    <div class="bg-[--bg-base]">
+        <main class="main-wrap mx-auto overflow-hidden h-screen md:h-auto">
+            <div class="grid grid-cols-12 gap-0 md:gap-4">
+                <div class="md:col-span-12 col-span-12 flex flex-col lg:items-center items-start justify-center md:pt-8 md:pb-32 h-screen md:h-auto">
+                    <div class="md:w-1/2 w-full lg:h-full md:h-auto mx-auto md:p-8 px-4 py-16 md:block flex justify-between flex-col">
+                        <div id="loading-overlay"
+                            class="overlay hidden absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
+                            <div class="spinner-border border-4 border-t-transparent border-[--primary-color] w-10 h-10 rounded-full">
+                            </div>
+                        </div>
+                        <div class="login-top">
+                            <h2 class="text-2xl font-bold mb-8 uppercase text-center">Nhập mã OTP</h2>
+                            <span class="text-sm block text-center">Mã OTP được gửi qua email <b
+                                    class="font-bold">tenkhachhang@gmail.com</b> <br>Quý khách vui lòng kiểm tra và nhập
+                                mã OTP:</span>
+                                <span class="lg:hidden block text-center mt-4">Mã OTP</span>
+                            <div class="otp-container mb-8 mt-4">
+                                <span class="hidden lg:block">Mã OTP</span>
+                                <input type="text" class="otp-input" maxlength="1" id="otp-1">
+                                <input type="text" class="otp-input" maxlength="1" id="otp-2">
+                                <input type="text" class="otp-input" maxlength="1" id="otp-3">
+                                <input type="text" class="otp-input" maxlength="1" id="otp-4">
+                                <input type="text" class="otp-input" maxlength="1" id="otp-5">
+                                <input type="text" class="otp-input" maxlength="1" id="otp-6">
+                            </div>
+                            <div id="error-message"
+                                class="error-message hidden text-[--primary-color] text-sm mt-2 mb-8">
+                                <div class="flex items-center justify-center gap-2">
+                                    <img src="../img/warning-circle.svg" width="20" alt=""> OTP không đúng, vui lòng
+                                    nhập lại
+                                </div>
+                            </div>
+                            <div id="timer-container" class="text-sm text-center mb-8">
+                                <span>Thời gian mã OTP hết hiệu lực: <b id="timer">04:59</b></span>
+                            </div>
+                            <div id="resend-message" class="mt-4 text-sm cursor-pointer text-center">
+                                Không nhận được mã? <b id="resend-link" class="font-bold underline">Gửi lại mã OTP</b>
+                            </div>
+                            <span class="text-center mt-2 block"><b>Lưu ý:</b> Không chia sẻ mã OTP với bất kỳ ai</span>
+                        </div>
+                        <div class="login-bottom mt-8 flex items-center justify-center gap-8">
+                            <button
+                                class="flex items-center justify-center gap-4 bg-[--bg-button-back] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                                <span id="btn-text">Quay lại</span>
+                            </button>
+                            <button id="confirm-btn"
+                                class="flex items-center justify-center gap-4 bg-[--primary-color] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                                <span id="btn-text">Xác nhận</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
-  <div id="overlay" class="overlay">
-    <div class="modal bg-[--bg-modal-color] text-left p-2">
-      <div class="modal-content border border-white p-8">
-        <div class="w-3/4 mx-auto">
-          <h3 class="text-2xl font-bold mb-4 text-center uppercase">XÁC THỰC THÀNH CÔNG</h3>
-          <span class="text-sm font-light block mb-4 text-center">Tuy nhiên, bạn chưa đăng ký tài khoản. Vui lòng hoàn
-            tất việc đăng ký tài khoản để có thể đăng nhập và tiếp tục sử dụng trang Bảo Hành Điện Tử Sharp Việt
-            Nam</span>
-          <div class="login-bottom text-center mt-8">
-            <a href="javascript:void(0);" id="otp-btn"
-              class="inline-flex items-center justify-center gap-4 bg-[--primary-color] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
-              Tiếp tục
-            </a>
-          </div>
-        </div>
-      </div>
+        </main>
     </div>
-  </div>
-  <footer>
-    <div class="footer_top bg-[--bg-footer-top] lg:px-8 px-4 py-4">
-      <div class="main-wrap mx-auto">
-        <div class="grid grid-cols-12 gap-4 md:gap-4">
-          <div class="col-span-12 lg:col-span-3 text-black">
-            <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
-            <span>Tel: 1800 1599</span>
-          </div>
-          <div class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-black py-8 md:py-0">
-            <div class=" w-full lg:w-1/2 mx-auto">
-              <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
-              <span>callcenter@svn.sharp-world.com</span>
+    <div id="overlay" class="overlay">
+        <div class="modal bg-[--bg-modal-color] text-left p-2">
+            <div class="modal-content border border-white lg:p-8 p-2 py-8">
+                <div class="md:w-3/4 w-full mx-auto">
+                    <h3 class="lg:text-2xl text-xl font-bold mb-4 text-center uppercase">XÁC THỰC THÀNH CÔNG</h3>
+                    <span class="text-sm font-light block mb-4 text-center">Tuy nhiên, bạn chưa đăng ký tài khoản. Vui
+                        lòng hoàn
+                        tất việc đăng ký tài khoản để có thể đăng nhập và tiếp tục sử dụng trang Bảo Hành Điện Tử Sharp
+                        Việt
+                        Nam</span>
+                    <div class="login-bottom text-center mt-8">
+                        <a href="javascript:void(0);" id="otp-btn"
+                            class="inline-flex items-center justify-center gap-4 bg-[--primary-color] px-4 py-3 text-white transition ease-in-out hover:bg-[--hover-bg] duration-300">
+                            Tiếp tục
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-span-12 lg:col-span-3 text-black">
-            <div class="w-full lg:w-2/3 ml-auto">
-              <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
-              <div class="flex gap-4 items-center justify-start">
-                <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.svg" alt=""
-                    class="w-6 h-6"></a>
-                <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt=""
-                    class="w-6 h-6"></a>
-                <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img src="../img/youtube_footer.svg" alt=""
-                    class="w-6 h-6"></a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-    <div class="footer_bottom bg-[--bg-footer-bottom] md:p-8 p-4">
-      <div class="main-wrap mx-auto">
-        <div class="grid grid-cols-12 gap-4 md:gap-4">
-          <div class="col-span-12 lg:col-span-3">
-            <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM</h3>
-            <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức, tp.hcm</span>
-            <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
-            <span class="block mb-4"><b>Mã số doanh nghiệp</b>: 0308159258
-              <br>Do sở KH&ĐT cấp ngày 13/3/2009
-            </span>
-            <a href="#" class="flex gap-4">
-              <span>Hotline: <b class="text-[--link-color]">1-800-1599</b> (Miễn phí)</span>
-            </a>
-          </div>
-          <div class="col-span-12 lg:col-span-6 text-white">
-            <div class=" w-full lg:w-1/2 mx-auto">
-              <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
-              <ul>
-                <li>
-                  <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản phẩm</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản phẩm</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo hành</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa chữa</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa chữa</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật thông tin</a>
-                </li>
-              </ul>
+    <footer>
+        <div class="footer_top bg-[--bg-footer-top] lg:px-8 lg:py-4  px-4 py-8">
+            <div class="main-wrap mx-auto">
+                <div class="grid grid-cols-12 gap-4 md:gap-4">
+                    <div class="col-span-12 lg:col-span-3 text-black">
+                        <h3 class="uppercase font-bold mb-2">Gọi cho chúng tôi</h3>
+                        <span>Tel: 1800 1599</span>
+                    </div>
+                    <div
+                        class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-t-0 lg:border-b-0 lg:border-black border-b border-t border-black py-8 md:py-0">
+                        <div class=" w-full lg:w-1/2 mx-auto">
+                            <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
+                            <span>callcenter@svn.sharp-world.com</span>
+                        </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-3 text-black">
+                        <div class="w-full lg:w-2/3 ml-auto">
+                            <h3 class="uppercase font-bold mb-2 text-left">Kết nối với chúng tôi</h3>
+                            <div class="flex gap-4 items-center justify-start">
+                                <a href="https://zalo.me/3652092524472390581"><img src="../img/zalo_footer.svg" alt=""
+                                        class="w-6 h-6"></a>
+                                <a href="https://www.facebook.com/sharpvietnam"><img src="../img/fb_footer.svg" alt=""
+                                        class="w-6 h-6"></a>
+                                <a href="https://www.youtube.com/@SHARPVIETNAMCHANNEL"><img
+                                        src="../img/youtube_footer.svg" alt="" class="w-6 h-6"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-span-12 lg:col-span-3 text-white">
-            <div class="w-full lg:w-2/3 ml-auto">
-              <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
-              <ul>
-                <li>
-                  <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo hành uỷ quyền</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến phản hồi</a>
-                </li>
-                <li>
-                  <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp ý</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </footer>
+        <div class="footer_bottom bg-[--bg-footer-bottom] md:p-8 p-4">
+            <div class="main-wrap mx-auto">
+                <div class="grid grid-cols-12 gap-4 md:gap-4">
+                    <div class="col-span-12 lg:col-span-3">
+                        <h3 class="uppercase font-bold mb-4 text-[--primary-color]">CÔNG TY TNHH ĐIỆN TỬ SHARP VIỆT NAM
+                        </h3>
+                        <span class="block mb-4"><b>Địa chỉ</b>: Số 159, võ nguyên giáp, phường thảo điền, tp.thủ đức,
+                            tp.hcm</span>
+                        <span class="block mb-4"><b>SĐT</b>: +84-28-39107499</span>
+                        <span class="block mb-4"><b>Mã số doanh nghiệp</b>: 0308159258
+                            <br>Do sở KH&ĐT cấp ngày 13/3/2009
+                        </span>
+                        <a href="#" class="flex gap-4">
+                            <span>Hotline: <b class="text-[--link-color]">1-800-1599</b> (Miễn phí)</span>
+                        </a>
+                    </div>
+                    <div class="col-span-12 lg:col-span-6 text-white">
+                        <div class=" w-full lg:w-1/2 mx-auto">
+                            <h3 class="uppercase font-bold mb-4 text-[--primary-color]">DỊCH VỤ CỦA CHÚNG TÔI</h3>
+                            <ul>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Danh sách sản
+                                        phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sản
+                                        phẩm</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu bảo
+                                        hành</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Đăng ký sửa
+                                        chữa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Tra cứu sửa
+                                        chữa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Cập nhật
+                                        thông tin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-3 text-white">
+                        <div class="w-full lg:w-2/3 ml-auto">
+                            <h3 class="uppercase font-bold mb-4 text-[--primary-color]">Bạn cần hỗ trợ?</h3>
+                            <ul>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Trung tâm bảo
+                                        hành uỷ quyền</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Gửi ý kiến
+                                        phản hồi</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-black mb-4 block hover:text-[--primary-color]">Liên hệ - Góp
+                                        ý</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.otp-input').on('input', function () {
-        var $this = $(this);
-        var nextInput = $this.next('.otp-input');
-        if ($this.val().length === 1 && nextInput.length) {
-          nextInput.focus();
-        }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.otp-input').on('input', function () {
+                var $this = $(this);
+                var nextInput = $this.next('.otp-input');
+                if ($this.val().length === 1 && nextInput.length) {
+                    nextInput.focus();
+                }
 
-        if ($this.val().length === 0) {
-          var prevInput = $this.prev('.otp-input');
-          if (prevInput.length) {
-            prevInput.focus();
-          }
-        }
-      });
+                if ($this.val().length === 0) {
+                    var prevInput = $this.prev('.otp-input');
+                    if (prevInput.length) {
+                        prevInput.focus();
+                    }
+                }
+            });
 
-      var timeLeft = 300;
-      var timerInterval = setInterval(function () {
-        var minutes = Math.floor(timeLeft / 60);
-        var seconds = timeLeft % 60;
-        $('#timer').text(
-          (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds
-        );
+            var timeLeft = 300;
+            var timerInterval = setInterval(function () {
+                var minutes = Math.floor(timeLeft / 60);
+                var seconds = timeLeft % 60;
+                $('#timer').text(
+                    (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds
+                );
 
-        if (timeLeft <= 0) {
-          clearInterval(timerInterval);
-          $('#timer').text('00:00');
-          $('#timer-container').addClass('hidden');
-          $('#resend-message').removeClass('hidden');
-        }
-        timeLeft--;
-      }, 1000);
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    $('#timer').text('00:00');
+                    $('#timer-container').addClass('hidden');
+                    $('#resend-message').removeClass('hidden');
+                }
+                timeLeft--;
+            }, 1000);
 
-      $('#confirm-btn').on('click', function () {
-        var otp = '';
-        $('.otp-input').each(function () {
-          otp += $(this).val();
+            $('#confirm-btn').on('click', function () {
+                var otp = '';
+                $('.otp-input').each(function () {
+                    otp += $(this).val();
+                });
+
+                if (otp.length === 6) {
+                    $('#error-message').addClass('hidden');
+                    $('#loading-overlay').removeClass('hidden');
+                    $('#btn-text').text('Đang kiểm tra...');
+
+                    setTimeout(function () {
+                        $('#loading-overlay').addClass('hidden');
+                        $('#btn-text').text('Xác nhận');
+                        $('#overlay').addClass('show');
+                    }, 2000);
+                } else {
+                    $('#error-message').removeClass('hidden');
+                }
+            });
+
+            $('#resend-link').on('click', function () {
+                alert("Mã OTP đã được gửi lại!");
+                $('#timer-container').removeClass('hidden');
+                $('#resend-message').addClass('hidden');
+                timeLeft = 300;
+                $('#timer').text('05:00');
+                $('#timer-container').text('Thời gian mã OTP hết hiệu lực: 05:00');
+            });
         });
-
-        if (otp.length === 6) {
-          $('#error-message').addClass('hidden');
-          $('#loading-overlay').removeClass('hidden');
-          $('#btn-text').text('Đang kiểm tra...');
-
-          setTimeout(function () {
-            $('#loading-overlay').addClass('hidden');
-            $('#btn-text').text('Xác nhận');
-            $('#overlay').addClass('show');
-          }, 2000);
-        } else {
-          $('#error-message').removeClass('hidden');
-        }
-      });
-
-      $('#resend-link').on('click', function () {
-        alert("Mã OTP đã được gửi lại!");
-        $('#timer-container').removeClass('hidden');
-        $('#resend-message').addClass('hidden');
-        timeLeft = 300;
-        $('#timer').text('05:00');
-        $('#timer-container').text('Thời gian mã OTP hết hiệu lực: 05:00');
-      });
-    });
-  </script>
+    </script>
 </body>
 
 </html>

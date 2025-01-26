@@ -10,25 +10,26 @@
 </head>
 
 <body>
-    <header class="border-b hidden md:block">
+    <header class="border-b block">
         <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
             <div class="logo">
                 <img src="../img/logo-sharp.svg" width="130" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
-                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white">TRA CỨU SỬA CHỮA</h2>
-                    <div class="w-2 min-h-12 bg-[--primary-color]"></div>
+                    <h2 class="text-xl bg-[--primary-color] px-8 py-2 text-white md:block hidden">Tra cứu sửa chữa</h2>
+                    <div class="w-2 min-h-12 bg-[--primary-color] md:block hidden"></div>
                     <div class="quick_link flex item-center gap-2">
-                        <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_h.svg"
-                                width="24" alt=""></a>
-                                <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/User.svg"
-                                    width="24" alt=""></a>
-                        <a href="" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg"
+                        <a href="/" class="w-11 h-11 flex items-center justify-center md:block hidden"><img
+                                src="../img/icon_h.svg" width="24" alt=""></a>
+                        <a href="#" class="w-11 h-11 flex items-center justify-center md:block hidden"><img
+                                src="../img/User.svg" width="24" alt=""></a>
+                        <a href="#" class="w-11 h-11 flex items-center justify-center"><img src="../img/icon_s_red.svg"
                                 width="24" alt=""></a>
                     </div>
                 </div>
-                <div class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
+                <div
+                    class="lang flex items-center gap-4 border-b border-[--primary-color] px-4 relative group cursor-pointer">
                     <span class="text-sm uppercase">Tiếng Việt</span>
                     <div class="dropdown-content absolute left-0 top-0 hidden bg-white shadow-lg mt-6 w-full">
                         <a href="#" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">TIẾNG VIỆT</a>
@@ -90,18 +91,18 @@
             </div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner hidden lg:block">
         <img src="../img/banner_head.png" alt="" width="100%">
     </div>
     <div class="bg-[--bg-base]">
-        <main class="main-wrap mx-auto overflow-hidden h-screen md:h-auto pt-4 pb-16">
+        <main class="main-wrap mx-auto overflow-hidden md:h-auto pt-4 lg:pb-16">
             <div class="grid grid-cols-12 gap-0 md:gap-4">
                 <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center">
                     <a class="flex items-center justify-start gap-2 mb-4 text-sm px-4 lg:px-0" href="">
                         <img src="../img/icon_back.svg" width="20" alt="">
                         <span class="decoration-1 underline">Quay lại</span>
                     </a>
-                    <div class="box-change w-3/4 mx-auto p-4">
+                    <div class="box-change lg:w-3/4 lg:mx-auto mx-4 p-4">
                         <div class="grid grid-cols-12 gap-4 mt-8 mb-8">
                             <div class="md:col-span-12 col-span-12 px-4 lg:px-0 flex item-center justify-center">
                                 <img src="../img/tivi.png" alt="" class="w-80">
@@ -109,56 +110,70 @@
                             <div class="md:col-span-12 col-span-12">
                                 <div class="grid grid-cols-5 gap-8">
                                     <div class="md:col-span-1 col-span-5 px-4 lg:px-0">
-                                        <div class="flex items-center gap-2 justify-center">
-                                            <h2 class="text-4xl font-bold text-[--text-heading-timeline]">1</h2>
-                                            <img src="../img/icon/icon_step_1.svg" alt="" class="w-8 h-8">
-                                        </div>
-                                        <div class="box-clippath p-4 bg-[--bg-button-back] font-bold pr-8 text-center my-4">
-                                            Đã tiếp nhận sản phẩm
+                                        <div class="flex lg:flex-col lg:gap-0 gap-4 justify-center">
+                                            <div class="flex items-center gap-2 justify-center">
+                                                <h2 class="text-4xl font-bold text-[--text-heading-timeline]">1</h2>
+                                                <img src="../img/icon/icon_step_1.svg" alt="" class="w-8 h-8">
+                                            </div>
+                                            <div class="box-clippath p-4 bg-[--bg-button-back] font-bold pr-8 text-center my-4">
+                                                <span class="lg:block hidden">Đã tiếp nhận sản phẩm</span>
+                                                <span class="block lg:hidden">Đã tiếp nhận <br> sản phẩm</span>
+                                            </div>
                                         </div>
                                         <span class="text-center block">Thời gian tiếp nhận</span>
                                         <span class="text-center block">12/03/2024</span>
                                     </div>
                                     <div class="md:col-span-1 col-span-5 px-4 lg:px-0">
-                                        <div class="flex items-center gap-2 justify-center">
-                                            <h2 class="text-4xl font-bold text-[--text-heading-timeline]">2</h2>
-                                            <img src="../img/icon/icon_step_2.svg" alt="" class="w-8 h-8">
-                                        </div>
-                                        <div class="box-clippath p-4 bg-[--bg-button-back] font-bold pr-8 text-center my-4">
-                                            Chuyển sang Kỹ thuật viên
+                                        <div class="flex lg:flex-col lg:gap-0 gap-4 justify-center">
+                                            <div class="flex items-center gap-2 justify-center">
+                                                <h2 class="text-4xl font-bold text-[--text-heading-timeline]">2</h2>
+                                                <img src="../img/icon/icon_step_2.svg" alt="" class="w-8 h-8">
+                                            </div>
+                                            <div class="box-clippath p-4 bg-[--bg-button-back] font-bold pr-8 text-center my-4">
+                                                <span class="lg:block hidden">Chuyển sang Kỹ thuật viên</span>
+                                                <span class="block lg:hidden">Chuyển sang <br> Kỹ thuật viên</span>
+                                            </div>
                                         </div>
                                         <span class="text-center block">Thời gian chuyển</span>
                                         <span class="text-center block">12/03/2024</span>
                                     </div>
                                     <div class="md:col-span-1 col-span-5 px-4 lg:px-0">
-                                        <div class="flex items-center gap-2 justify-center">
-                                            <h2 class="text-4xl font-bold text-[--text-heading-timeline]">3</h2>
-                                            <img src="../img/icon/icon_step_3.svg" alt="" class="w-8 h-8">
-                                        </div>
-                                        <div class="box-clippath p-4 bg-[--primary-color] text-white font-bold pr-8 text-center my-4">
-                                            Đang được sửa chữa
+                                        <div class="flex lg:flex-col lg:gap-0 gap-4 justify-center">
+                                            <div class="flex items-center gap-2 justify-center">
+                                                <h2 class="text-4xl font-bold text-[--text-heading-timeline]">3</h2>
+                                                <img src="../img/icon/icon_step_3.svg" alt="" class="w-8 h-8">
+                                            </div>
+                                            <div class="box-clippath p-4 bg-[--bg-button-back] font-bold pr-8 text-center my-4">
+                                                <span class="lg:block hidden">Đang được sửa chữa</span>
+                                                <span class="block lg:hidden">Đang được <br> sửa chữa</span>
+                                            </div>
                                         </div>
                                         <span class="text-center block">Trạng thái chi tiết</span>
                                         <span class="text-center block">(nếu có)</span>
                                     </div>
                                     <div class="md:col-span-1 col-span-5 px-4 lg:px-0">
-                                        <div class="flex items-center gap-2 justify-center">
-                                            <h2 class="text-4xl font-bold text-[--text-heading-timeline]">4</h2>
-                                            <img src="../img/icon/icon_step_4.svg" alt="" class="w-8 h-8">
-                                        </div>
-                                        <div class="box-clippath p-4 bg-[--bg-button-back] font-bold pr-8 text-center my-4">
-                                            Hoàn thành sửa chữa
+                                        <div class="flex lg:flex-col lg:gap-0 gap-4 justify-center">
+                                            <div class="flex items-center gap-2 justify-center">
+                                                <h2 class="text-4xl font-bold text-[--text-heading-timeline]">4</h2>
+                                                <img src="../img/icon/icon_step_4.svg" alt="" class="w-8 h-8">
+                                            </div>
+                                            <div class="box-clippath p-4 bg-[--bg-button-back] font-bold pr-8 text-center my-4">
+                                                <span class="lg:block hidden">Hoàn thành sửa chữa</span>
+                                                <span class="block lg:hidden">Hoàn thành <br> sửa chữa</span>
+                                            </div>
                                         </div>
                                         <span class="text-center block">Ngày/giờ hoàn thành</span>
                                         <span class="text-center block">hoặc đã hoàn thành</span>
                                     </div>
                                     <div class="md:col-span-1 col-span-5 px-4 lg:px-0">
-                                        <div class="flex items-center gap-2 justify-center">
-                                            <h2 class="text-4xl font-bold text-[--text-heading-timeline]">5</h2>
-                                            <img src="../img/icon/icon_step_5.svg" alt="" class="w-8 h-8">
-                                        </div>
-                                        <div class="box-clippath p-4 bg-[--bg-button-back] font-bold pr-8 text-center my-4">
-                                            Hoàn trả <br> sản phẩm
+                                        <div class="flex lg:flex-col lg:gap-0 gap-4 justify-center">
+                                            <div class="flex items-center gap-2 justify-center">
+                                                <h2 class="text-4xl font-bold text-[--text-heading-timeline]">5</h2>
+                                                <img src="../img/icon/icon_step_5.svg" alt="" class="w-8 h-8">
+                                            </div>
+                                            <div class="box-clippath p-4 bg-[--bg-button-back] font-bold pr-8 text-center my-4">
+                                                Hoàn trả <br> sản phẩm
+                                            </div>
                                         </div>
                                         <span class="text-center block">Đã trả sản phẩm</span>
                                         <span class="text-center block">12/03/2024</span>
@@ -170,7 +185,7 @@
                     </div>
                 </div>
                 <div class="md:col-span-12 col-span-12 px-4 lg:px-0 mt-8">
-                    <div class="w-1/2 mx-auto px-4">
+                    <div class="lg:w-1/2 w-full mx-auto px-4">
                         <p class="mb-4 text-center">Nếu có thắc mắc về tình trạng sản phẩm <br>Quý khách có thể liên hệ <b>Trung tâm Chăm sóc Khách hàng</b> của Sharp Việt Nam qua Hotline <span class="text-[--link-color]">1-800-1599</span> hoặc Email: <span class="text-[--link-color]">callcenter@svn.sharp-world.com</span></p>
                         
                     </div>
@@ -179,7 +194,7 @@
         </main>
     </div>
     <footer>
-        <div class="footer_top bg-[--bg-footer-top] lg:px-8 px-4 py-4">
+        <div class="footer_top bg-[--bg-footer-top] lg:px-8 lg:py-4  px-4 py-8">
             <div class="main-wrap mx-auto">
                 <div class="grid grid-cols-12 gap-4 md:gap-4">
                     <div class="col-span-12 lg:col-span-3 text-black">
@@ -187,7 +202,7 @@
                         <span>Tel: 1800 1599</span>
                     </div>
                     <div
-                        class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-black py-8 md:py-0">
+                        class="lg:col-span-6 col-span-12 text-black lg:border-l lg:border-r lg:border-t-0 lg:border-b-0 lg:border-black border-b border-t border-black py-8 md:py-0">
                         <div class=" w-full lg:w-1/2 mx-auto">
                             <h3 class="uppercase font-bold mb-2">Email cho chúng tôi</h3>
                             <span>callcenter@svn.sharp-world.com</span>
@@ -279,8 +294,62 @@
             </div>
         </div>
     </footer>
-
+    <div class="nav-bar fixed bottom-0 left-0 right-0 w-full bg-white border-t border-[--primary-color] lg:hidden block">
+        <div class="flex items-center justify-between gap-4 w-full py-4 px-8">
+            <div class="icon">
+                <img src="../img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Trang chủ</span>
+            </div>
+            <div class="icon">
+                <img src="../img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Tài khoản</span>
+            </div>
+            <div class="icon" id="category">
+                <img src="../img/icon_list.svg" class="w-6 h-6 mx-auto" alt="">
+                <span>Danh mục</span>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-dropdown">
+        <div class="dropdown border border-[--border-color] bg-white" id="dropdown_category">
+            <ul class="dropdown-list">
+                <div class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
+                    <span class="font-bold">Danh mục</span>
+                    <img src="../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="" id="close-category">
+                </div>
+                <div class="dropdown-group">
+                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">BẢO HÀNH SẢN PHẨM</div>
+                    <li class="p-4" data-value="1">Danh sách sản phẩm</li>
+                    <li class="p-4" data-value="2">Kích hoạt bảo hành</li>
+                    <li class="p-4" data-value="3">Tra cứu bảo hành</li>
+                    <li class="p-4" data-value="4">Đăng ký sửa chữa</li>
+                    <li class="p-4" data-value="5">Tra cứu sửa chữa</li>
+                    <li class="p-4" data-value="6">Cập nhật thông tin</li>
+                </div>
+                <div class="dropdown-group">
+                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">THÔNG TIN SẢN PHẨM</div>
+                    <li class="p-4" data-value="7">Thiết bị nghe nhìn</li>
+                    <li class="p-4" data-value="8">Điều hoà & máy lọc khi</li>
+                    <li class="p-4" data-value="9">Thiết bị gia dụng</li>
+                    <li class="p-4" data-value="10">Thiết bị nhà bếp</li>
+                    <li class="p-4" data-value="11">Chăm sóc cá nhân</li>
+                </div>
+            </ul>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#category').click(() => {
+                $('#dropdown_category').addClass('open');
+                $('.overlay-dropdown').addClass('active');
+            })
+            $('#close-category').click(() => {
+                $('#dropdown_category').removeClass('open');
+                $('.overlay-dropdown').removeClass('active');
+            })
+        });
+    </script>
     <script src="../js/index.js"></script>
 </body>
 
