@@ -13,7 +13,7 @@
     <header class="border-b block">
         <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
             <div class="logo">
-                <img src="../img/logo-sharp.svg" width="70" alt="">
+                <img src="../img/logo-sharp.svg"  width="110" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
@@ -308,8 +308,8 @@
     <script>
         $(document).ready(function () {
             $('#category').click(() => {
-                $('#dropdown_category').addClass('open');
-                $('.overlay-dropdown').addClass('active');
+                          $('#dropdown_category').toggleClass('open');
+                $('.overlay-dropdown').toggleClass('active');
             })
             $('#close-category').click(() => {
                 $('#dropdown_category').removeClass('open');

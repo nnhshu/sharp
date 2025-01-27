@@ -315,12 +315,16 @@ select {
         width: 90%;
     }
 
+    .dropdown.open .dropdown-list{
+        bottom: 75px;
+    }
+
     .dropdown-list {
-        max-height: 90vh;
+        max-height: 80vh;
         position: fixed;
         top: unset;
         bottom: 0px;
-        height: 90vh;
+        height: 80vh;
     }
 
     .overlay-dropdown {

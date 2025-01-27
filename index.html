@@ -13,7 +13,7 @@
     <header class="border-b md:hidden block">
         <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
             <div class="logo">
-                <img src="./img/logo-sharp.svg" width="70" alt="">
+                <img src="./img/logo-sharp.svg"  width="110" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
@@ -171,20 +171,59 @@
     <div class="nav-bar fixed bottom-0 left-0 right-0 w-full bg-white border-t border-[--primary-color] lg:hidden block">
         <div class="flex items-center justify-between gap-4 w-full py-4 px-8">
             <div class="icon">
-                <img src="./img/icon_home.svg" class="w-6 h-6 mx-auto" alt="">
-                <span>Trang chủ</span>
+                <img src="../img/icon_home_active.svg" class="w-6 h-6 mx-auto" alt="">
+                <span class="text-[--primary-color]">Trang chủ</span>
             </div>
             <div class="icon">
-                <img src="./img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
+                <img src="../img/icon_user.svg" class="w-6 h-6 mx-auto" alt="">
                 <span>Tài khoản</span>
             </div>
-            <div class="icon">
-                <img src="./img/icon_list.svg" class="w-6 h-6 mx-auto" alt="">
+            <div class="icon" id="category">
+                <img src="../img/icon_list.svg" class="w-6 h-6 mx-auto" alt="">
                 <span>Danh mục</span>
             </div>
+        </div>
+    </div>
+    <div class="overlay-dropdown">
+        <div class="dropdown border border-[--border-color] bg-white" id="dropdown_category">
+            <ul class="dropdown-list">
+                <div class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
+                    <span class="font-bold">Danh mục</span>
+                    <img src="../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="" id="close-category">
+                </div>
+                <div class="dropdown-group">
+                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">BẢO HÀNH SẢN PHẨM</div>
+                    <li class="p-4" data-value="1">Danh sách sản phẩm</li>
+                    <li class="p-4" data-value="2">Kích hoạt bảo hành</li>
+                    <li class="p-4" data-value="3">Tra cứu bảo hành</li>
+                    <li class="p-4" data-value="4">Đăng ký sửa chữa</li>
+                    <li class="p-4" data-value="5">Tra cứu sửa chữa</li>
+                    <li class="p-4" data-value="6">Cập nhật thông tin</li>
+                </div>
+                <div class="dropdown-group">
+                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">THÔNG TIN SẢN PHẨM</div>
+                    <li class="p-4" data-value="7">Thiết bị nghe nhìn</li>
+                    <li class="p-4" data-value="8">Điều hoà & máy lọc khi</li>
+                    <li class="p-4" data-value="9">Thiết bị gia dụng</li>
+                    <li class="p-4" data-value="10">Thiết bị nhà bếp</li>
+                    <li class="p-4" data-value="11">Chăm sóc cá nhân</li>
+                </div>
+            </ul>
         </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="./js/index.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#category').click(() => {
+            $('#dropdown_category').toggleClass('open');
+            $('.overlay-dropdown').toggleClass('active');
+        })
+        $('#close-category').click(() => {
+            $('#dropdown_category').removeClass('open');
+            $('.overlay-dropdown').removeClass('active');
+        })
+    });
+</script>
 </html>

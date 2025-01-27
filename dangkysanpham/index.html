@@ -13,7 +13,7 @@
     <header class="border-b block">
         <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
             <div class="logo">
-                <img src="../img/logo-sharp.svg" width="70" alt="">
+                <img src="../img/logo-sharp.svg"  width="110" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
@@ -119,6 +119,10 @@
                                             <span><img src="../img/arrow_down.svg" class="w-4 h-4" alt=""></span>
                                         </div>
                                         <ul class="dropdown-list" id="dropdown-list">
+                                            <div class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
+                                                <span>Loại sản phẩm</span>
+                                                <img src="../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="">
+                                            </div>
                                             <div class="dropdown-group">
                                                 <div class="dropdown-group-title p-4 text-[--primary-color] border-b">THIẾT BỊ NHÀ BẾP</div>
                                                 <li class="p-4" data-value="1">Nồi cơm điện</li>
@@ -136,7 +140,6 @@
                                         </ul>
                                     </div>
                                 </div>
-                                
                                 <div class="form-control mt-4">
                                     <label for="city" class="mb-2 block font-semibold text-base">Tên sản phẩm</label>
                                     <div class="dropdown border border-[--border-color] bg-white" id="dropdown_tensanpham">
@@ -145,6 +148,10 @@
                                             <span><img src="../img/arrow_down.svg" class="w-4 h-4" alt=""></span>
                                         </div>
                                         <ul class="dropdown-list" id="dropdown-list_tensanpham">
+                                            <div class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
+                                                <span>Tên sản phẩm</span>
+                                                <img src="../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="">
+                                            </div>
                                             <div class="dropdown-group">
                                                 <li class="p-4" data-value="1">Máy lạnh BSW</li>
                                                 <li class="p-4" data-value="2">Bình thuỷ</li>
@@ -337,13 +344,16 @@
     <script>
         $(document).ready(function () {
             $('#category').click(() => {
-                $('#dropdown_category').addClass('open');
-                $('.overlay-dropdown').addClass('active');
+                $('#dropdown_category').toggleClass('open');
+                $('.overlay-dropdown').toggleClass('active');
             })
             $('#close-category').click(() => {
                 $('#dropdown_category').removeClass('open');
                 $('.overlay-dropdown').removeClass('active');
             })
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            setupDropdown('dropdown', 'dropdown-btn', 'dropdown-text', 'dropdown-list');
         });
     </script>
     <script src="../js/index.js"></script>

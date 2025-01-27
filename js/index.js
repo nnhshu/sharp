@@ -16,6 +16,12 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.close-dropdown').on('click', function () {
+        $('.dropdown').removeClass('open');
+    });
+});
+
 function setupDropdown(dropdownId, dropdownBtnId, dropdownTextId, dropdownListId) {
     const dropdown = document.getElementById(dropdownId);
     const dropdownBtn = document.getElementById(dropdownBtnId);
