@@ -306,6 +306,9 @@ select {
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+.nav-bar{
+    z-index: 999;
+}
 
 @media screen and (max-width: 767px) {
     .modal {
