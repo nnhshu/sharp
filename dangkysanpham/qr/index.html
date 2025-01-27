@@ -24,8 +24,12 @@
                                 src="../../img/icon_h.svg" width="24" alt=""></a>
                         <a href="#" class="w-11 h-11 items-center justify-center md:flex hidden"><img
                                 src="../../img/User.svg" width="24" alt=""></a>
-                        <a href="#" class="w-11 h-11 flex items-center justify-center"><img src="../../img/icon_s_red.svg"
-                                width="24" alt=""></a>
+                                <div class="quick_link flex items-center gap-2 relative min-w-11">
+                                    <a href="javascript:void(0)" onclick="toggleSearchInput()" class="w-11 h-11 flex items-center justify-center absolute">
+                                        <img src="../../img/icon_s_red.svg" width="24" alt="Search">
+                                    </a>
+                                    <input id="search-input" type="text" class="hidden px-4 py-2 border border-gray-300 rounded pl-11" placeholder="Nhập từ khóa...">
+                                </div>
                     </div>
                 </div>
                 <div
