@@ -351,4 +351,14 @@ select {
     .contact-top:after {
         top: 14%;
     }
+
+    .dropdown-list.dropdown-list-mb {
+        overflow-y: hidden;
+    }
+    
+    .dropdown-group-wrap {
+        overflow-y: auto;
+        max-height: calc(100% - 54px );
+        padding-bottom: 16px;
+    }
 }

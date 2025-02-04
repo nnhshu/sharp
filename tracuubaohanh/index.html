@@ -13,7 +13,7 @@
     <header class="border-b block">
         <div class="mx-auto flex items-center justify-between py-4  px-4 border-solid ">
             <div class="logo">
-                <img src="../img/logo-sharp.svg"  width="110" alt="">
+                <img src="../img/logo-sharp.svg" width="110" alt="">
             </div>
             <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-4">
@@ -25,10 +25,13 @@
                         <a href="#" class="w-11 h-11 items-center justify-center md:flex hidden"><img
                                 src="../img/User.svg" width="24" alt=""></a>
                         <div class="quick_link flex items-center gap-2 relative min-w-11">
-                            <a href="javascript:void(0)" onclick="toggleSearchInput()" class="w-11 h-11 flex items-center justify-center absolute">
+                            <a href="javascript:void(0)" onclick="toggleSearchInput()"
+                                class="w-11 h-11 flex items-center justify-center absolute">
                                 <img src="../img/icon_s_red.svg" width="24" alt="Search">
                             </a>
-                            <input id="search-input" type="text" class="hidden px-4 py-2 border border-gray-300 rounded pl-11" placeholder="Nhập từ khóa...">
+                            <input id="search-input" type="text"
+                                class="hidden px-4 py-2 border border-gray-300 rounded pl-11"
+                                placeholder="Nhập từ khóa...">
                         </div>
                     </div>
                 </div>
@@ -101,8 +104,10 @@
                 <div class="md:col-span-12 col-span-12 flex flex-col item-center justify-center pt-8 pb-16">
                     <div class="relative lg:w-1/2 w-full mx-auto md:p-8 p-4 md:block flex justify-between flex-col">
                         <div class="login-top">
-                            <h2 class="text-2xl font-bold mb-4 uppercase text-center lg:block hidden">Tra cứu bảo hành điện tử</h2>
-                            <h2 class="text-2xl font-bold mb-4 uppercase text-center lg:hidden block">Tra cứu <br> bảo hành điện tử</h2>
+                            <h2 class="text-2xl font-bold mb-4 uppercase text-center lg:block hidden">Tra cứu bảo hành
+                                điện tử</h2>
+                            <h2 class="text-2xl font-bold mb-4 uppercase text-center lg:hidden block">Tra cứu <br> bảo
+                                hành điện tử</h2>
                             <span class="text-sm text-center block">Tất cả sản phẩm Sharp được kích hoạt bảo hành điện
                                 tử
                                 ngay sau khi mua. Quý khách vui lòng yêu cầu nơi bán (đại lý, cửa hàng)
@@ -117,26 +122,31 @@
                                             <span id="dropdown-text">Chọn loại sản phẩm</span>
                                             <span><img src="../img/arrow_down.svg" class="w-4 h-4" alt=""></span>
                                         </div>
-                                        <ul class="dropdown-list" id="dropdown-list">
-                                            <div class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
+                                        <ul class="dropdown-list dropdown-list-mb" id="dropdown-list">
+                                            <div
+                                                class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
                                                 <span>Loại sản phẩm</span>
                                                 <img src="../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="">
                                             </div>
-                                            <div class="dropdown-group">
-                                                <div class="dropdown-group-title p-4 text-[--primary-color] border-b">
-                                                    THIẾT BỊ NHÀ BẾP</div>
-                                                <li class="p-4" data-value="1">Nồi cơm điện</li>
-                                                <li class="p-4" data-value="2">Bình thuỷ</li>
-                                                <li class="p-4" data-value="3">Lò nướng điện</li>
-                                                <li class="p-4" data-value="4">Lò vi sóng</li>
-                                                <li class="p-4" data-value="5">Nồi chiên không dầu</li>
-                                            </div>
-                                            <div class="dropdown-group">
-                                                <div class="dropdown-group-title p-4 text-[--primary-color] border-b">
-                                                    THIẾT BỊ GIA DỤNG</div>
-                                                <li class="p-4" data-value="6">Máy giặt</li>
-                                                <li class="p-4" data-value="7">Tủ lạnh</li>
-                                                <li class="p-4" data-value="8">Quạt</li>
+                                            <div class="dropdown-group-wrap">
+                                                <div class="dropdown-group">
+                                                    <div
+                                                        class="dropdown-group-title p-4 text-[--primary-color] border-b">
+                                                        THIẾT BỊ NHÀ BẾP</div>
+                                                    <li class="p-4" data-value="1">Nồi cơm điện</li>
+                                                    <li class="p-4" data-value="2">Bình thuỷ</li>
+                                                    <li class="p-4" data-value="3">Lò nướng điện</li>
+                                                    <li class="p-4" data-value="4">Lò vi sóng</li>
+                                                    <li class="p-4" data-value="5">Nồi chiên không dầu</li>
+                                                </div>
+                                                <div class="dropdown-group">
+                                                    <div
+                                                        class="dropdown-group-title p-4 text-[--primary-color] border-b">
+                                                        THIẾT BỊ GIA DỤNG</div>
+                                                    <li class="p-4" data-value="6">Máy giặt</li>
+                                                    <li class="p-4" data-value="7">Tủ lạnh</li>
+                                                    <li class="p-4" data-value="8">Quạt</li>
+                                                </div>
                                             </div>
                                         </ul>
                                     </div>
@@ -150,7 +160,8 @@
                                             <span><img src="../img/arrow_down.svg" class="w-4 h-4" alt=""></span>
                                         </div>
                                         <ul class="dropdown-list" id="dropdown-list_tensanpham">
-                                            <div class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
+                                            <div
+                                                class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
                                                 <span>Tên sản phẩm</span>
                                                 <img src="../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="">
                                             </div>
@@ -327,7 +338,8 @@
         </div>
     </div>
 
-    <div class="nav-bar fixed bottom-0 left-0 right-0 w-full bg-white border-t border-[--primary-color] lg:hidden block">
+    <div
+        class="nav-bar fixed bottom-0 left-0 right-0 w-full bg-white border-t border-[--primary-color] lg:hidden block">
         <div class="flex items-center justify-between gap-4 w-full py-4 px-8">
             <div class="icon">
                 <img src="../img/icon_home.svg" class="w-6 h-6 mx-auto" alt="">
@@ -345,27 +357,29 @@
     </div>
     <div class="overlay-dropdown">
         <div class="dropdown border border-[--border-color] bg-white" id="dropdown_category">
-            <ul class="dropdown-list">
+            <ul class="dropdown-list dropdown-list-mb">
                 <div class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
                     <span class="font-bold">Danh mục</span>
                     <img src="../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="" id="close-category">
                 </div>
-                <div class="dropdown-group">
-                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">BẢO HÀNH SẢN PHẨM</div>
-                    <li class="p-4" data-value="1">Danh sách sản phẩm</li>
-                    <li class="p-4" data-value="2">Kích hoạt bảo hành</li>
-                    <li class="p-4" data-value="3">Tra cứu bảo hành</li>
-                    <li class="p-4" data-value="4">Đăng ký sửa chữa</li>
-                    <li class="p-4" data-value="5">Tra cứu sửa chữa</li>
-                    <li class="p-4" data-value="6">Cập nhật thông tin</li>
-                </div>
-                <div class="dropdown-group">
-                    <div class="dropdown-group-title p-4 text-[--primary-color] border-b">THÔNG TIN SẢN PHẨM</div>
-                    <li class="p-4" data-value="7">Thiết bị nghe nhìn</li>
-                    <li class="p-4" data-value="8">Điều hoà & máy lọc khi</li>
-                    <li class="p-4" data-value="9">Thiết bị gia dụng</li>
-                    <li class="p-4" data-value="10">Thiết bị nhà bếp</li>
-                    <li class="p-4" data-value="11">Chăm sóc cá nhân</li>
+                <div class="dropdown-group-wrap">
+                    <div class="dropdown-group">
+                        <div class="dropdown-group-title p-4 text-[--primary-color] border-b">BẢO HÀNH SẢN PHẨM</div>
+                        <li class="p-4" data-value="1">Danh sách sản phẩm</li>
+                        <li class="p-4" data-value="2">Kích hoạt bảo hành</li>
+                        <li class="p-4" data-value="3">Tra cứu bảo hành</li>
+                        <li class="p-4" data-value="4">Đăng ký sửa chữa</li>
+                        <li class="p-4" data-value="5">Tra cứu sửa chữa</li>
+                        <li class="p-4" data-value="6">Cập nhật thông tin</li>
+                    </div>
+                    <div class="dropdown-group">
+                        <div class="dropdown-group-title p-4 text-[--primary-color] border-b">THÔNG TIN SẢN PHẨM</div>
+                        <li class="p-4" data-value="7">Thiết bị nghe nhìn</li>
+                        <li class="p-4" data-value="8">Điều hoà & máy lọc khi</li>
+                        <li class="p-4" data-value="9">Thiết bị gia dụng</li>
+                        <li class="p-4" data-value="10">Thiết bị nhà bếp</li>
+                        <li class="p-4" data-value="11">Chăm sóc cá nhân</li>
+                    </div>
                 </div>
             </ul>
         </div>
@@ -374,7 +388,7 @@
     <script>
         $(document).ready(function () {
             $('#category').click(() => {
-                          $('#dropdown_category').toggleClass('open');
+                $('#dropdown_category').toggleClass('open');
                 $('.overlay-dropdown').toggleClass('active');
             })
             $('#close-category').click(() => {
