@@ -7,6 +7,8 @@
     <title>Đăng nhập</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
 <body>
@@ -177,9 +179,10 @@
                                 </div>
                                 <div class="form-control mt-4">
                                     <label for="date" class="mb-2 block font-semibold text-base">Ngày mua hàng</label>
-                                    <input id="date" type="date"
-                                        class="border border-[--border-color] block w-full px-4 py-3"
-                                        placeholder="Ngày mua hàng...">
+                                    <div class="relative">
+                                        <input id="date" type="text" class="border border-[--border-color] block w-full px-4 py-3" placeholder="Ngày mua hàng..." data-input />
+                                        <img src="../img/icon/lich.svg" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2" alt="">
+                                    </div>
                                 </div>
                                 <div class="form-control mt-4">
                                     <label for="phone" class="mb-2 block font-semibold text-base">Hình ảnh đính kèm</label>
@@ -344,6 +347,17 @@
                         <li class="p-4" data-value="9">Thiết bị gia dụng</li>
                         <li class="p-4" data-value="10">Thiết bị nhà bếp</li>
                         <li class="p-4" data-value="11">Chăm sóc cá nhân</li>
+                        <li class="p-4" data-value="11">Thiết bị văn phòng</li>
+                        <li class="p-4" data-value="11">Gallery</li>
+                    </div>
+                    <div class="dropdown-group">
+                        <div class="dropdown-group-title p-4 text-[--primary-color] border-b uppercase">Mua hàng online</div>
+                        <li class="p-4" data-value="7"><a href="https://www.lazada.vn/shop/sharp-flagship-store"
+                            class="block text-gray-800 hover:bg-gray-100">Lazada Sharp Flagship Store</a></li>
+                        <li class="p-4" data-value="8"><a href="https://shopee.vn/sharp_official_store"
+                            class="block text-gray-800 hover:bg-gray-100">Shopee Sharp Official Store</a></li>
+                        <li class="p-4" data-value="9"><a href="https://www.cocorolife.vn/"
+                            class="block text-gray-800 hover:bg-gray-100">Cocorolife</a></li>
                     </div>
                 </div>
             </ul>
@@ -365,6 +379,11 @@
             setupDropdown('dropdown', 'dropdown-btn', 'dropdown-text', 'dropdown-list');
         });
     </script>
+    <script>
+        flatpickr("#date", {
+            dateFormat: "d-m-Y",
+        });
+    </script>      
     <script src="../js/index.js"></script>
     <script>
         const fileInput = document.getElementById('file-upload');

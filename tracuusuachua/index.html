@@ -158,14 +158,21 @@
                                             <span id="dropdown-text_tensanpham">Chọn Model</span>
                                             <span><img src="../img/arrow_down.svg" class="w-4 h-4" alt=""></span>
                                         </div>
-                                        <ul class="dropdown-list" id="dropdown-list_tensanpham">
-                                            <div class="dropdown-group">
-                                                <li class="p-4" data-value="1">AH-X13ZEW</li>
-                                                <li class="p-4" data-value="1">AH-X13ZEW</li>
-                                                <li class="p-4" data-value="1">AH-X13ZEW</li>
-                                                <li class="p-4" data-value="1">AH-X13ZEW</li>
-                                                <li class="p-4" data-value="1">AH-X13ZEW</li>
-                                                <li class="p-4" data-value="1">AH-X13ZEW</li>
+                                        <ul class="dropdown-list dropdown-list-mb" id="dropdown-list_tensanpham">
+                                            <div
+                                                class="dropdown-title lg:hidden flex items-center justify-between p-4 border-b">
+                                                <span>Model</span>
+                                                <img src="../img/icon_close.svg" class="w-4 h-4 close-dropdown" alt="">
+                                            </div>
+                                            <div class="dropdown-group-wrap">
+                                                <div class="dropdown-group">
+                                                    <li class="p-4" data-value="1">AH-X13ZEW</li>
+                                                    <li class="p-4" data-value="1">AH-X13ZEW</li>
+                                                    <li class="p-4" data-value="1">AH-X13ZEW</li>
+                                                    <li class="p-4" data-value="1">AH-X13ZEW</li>
+                                                    <li class="p-4" data-value="1">AH-X13ZEW</li>
+                                                    <li class="p-4" data-value="1">AH-X13ZEW</li>
+                                                </div>
                                             </div>
                                         </ul>
                                     </div>
@@ -331,6 +338,17 @@
                         <li class="p-4" data-value="9">Thiết bị gia dụng</li>
                         <li class="p-4" data-value="10">Thiết bị nhà bếp</li>
                         <li class="p-4" data-value="11">Chăm sóc cá nhân</li>
+                        <li class="p-4" data-value="11">Thiết bị văn phòng</li>
+                        <li class="p-4" data-value="11">Gallery</li>
+                    </div>
+                    <div class="dropdown-group">
+                        <div class="dropdown-group-title p-4 text-[--primary-color] border-b uppercase">Mua hàng online</div>
+                        <li class="p-4" data-value="7"><a href="https://www.lazada.vn/shop/sharp-flagship-store"
+                            class="block text-gray-800 hover:bg-gray-100">Lazada Sharp Flagship Store</a></li>
+                        <li class="p-4" data-value="8"><a href="https://shopee.vn/sharp_official_store"
+                            class="block text-gray-800 hover:bg-gray-100">Shopee Sharp Official Store</a></li>
+                        <li class="p-4" data-value="9"><a href="https://www.cocorolife.vn/"
+                            class="block text-gray-800 hover:bg-gray-100">Cocorolife</a></li>
                     </div>
                 </div>
             </ul>
@@ -351,47 +369,9 @@
         });
     </script>
     <script>
-        // Function to handle the dropdown functionality
-        function setupDropdown(dropdownId, dropdownBtnId, dropdownTextId, dropdownListId) {
-            const dropdown = document.getElementById(dropdownId);
-            const dropdownBtn = document.getElementById(dropdownBtnId);
-            const dropdownList = document.getElementById(dropdownListId);
-            const dropdownText = document.getElementById(dropdownTextId);
     
-            // Toggle dropdown visibility when the button is clicked
-            dropdownBtn.addEventListener('click', () => {
-                dropdown.classList.toggle('open');
-            });
-    
-            // Handle item selection from dropdown
-            dropdownList.querySelectorAll('li').forEach(item => {
-                item.addEventListener('click', (e) => {
-                    const value = e.target.dataset.value;
-                    const text = e.target.innerText;
-    
-                    // Update the selected value in the button
-                    dropdownText.innerText = text;
-    
-                    // Close the dropdown
-                    dropdown.classList.remove('open');
-    
-                    // Handle selected value (e.g., save to backend or use it elsewhere)
-                    console.log("Selected Value: ", value);
-                });
-            });
-    
-            // Close dropdown if clicked outside
-            document.addEventListener('click', (e) => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('open');
-                }
-            });
-        }
-    
-        // Setup dropdowns for product type and product name
         document.addEventListener('DOMContentLoaded', () => {
             setupDropdown('dropdown', 'dropdown-btn', 'dropdown-text', 'dropdown-list'); // Loại sản phẩm
-            setupDropdown('dropdown_tensanpham', 'dropdown-btn_tensanpham', 'dropdown-text_tensanpham', 'dropdown-list_tensanpham'); // Tên sản phẩm
         });
     </script>
 </body>
