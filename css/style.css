@@ -378,15 +378,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .dropdown.open .dropdown-list {
-        bottom: 75px;
+        bottom: 0px;
+        z-index: 999;
     }
 
     .dropdown-list {
-        max-height: 80vh;
+        max-height: 100vh;
         position: fixed;
         top: unset;
         bottom: 0px;
-        height: 80vh;
+        height: 100vh;
     }
 
     .overlay-dropdown {
