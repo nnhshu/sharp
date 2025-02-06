@@ -380,6 +380,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .dropdown.open .dropdown-list {
         bottom: 0px;
         z-index: 999;
+        padding-bottom: 80px;
     }
 
     .dropdown-list {
