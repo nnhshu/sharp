@@ -178,7 +178,9 @@
                                 <div class="form-control mt-4">
                                     <label for="date" class="mb-2 block font-semibold text-base">Ngày mua hàng</label>
                                     <div class="relative">
-                                        <input id="date" type="date" class="border border-[--border-color] block w-full px-4 py-3" placeholder="Ngày mua hàng..." data-input />
+                                        <input id="date" type="date" class="border border-[--border-color] block w-full px-4 py-3" placeholder="Ngày mua hàng..." onfocus="this.type='date';this.focus();" 
+                                        onblur="if(this.value == '') this.type='text';" />
+                                        <img src="../img/icon/lich.svg" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 lg:hidden block" alt="">
                                     </div>
                                 </div>
                                 <div class="form-control mt-4">
@@ -304,7 +306,7 @@
             </div>
         </div>
     </footer>
-    <div class="nav-bar fixed bottom-0 left-0 right-0 w-full bg-white border-t border-[--primary-color] lg:hidden block">
+    <div class="nav-bar fixed bottom-0 left-0 right-0 w-full bg-white border-t border-[--primary-color] lg:hidden md:hidden block">
         <div class="flex items-center justify-between gap-4 w-full py-4 px-8">
             <div class="icon">
                 <img src="../img/icon_home.svg" class="w-6 h-6 mx-auto" alt="">
@@ -361,6 +363,8 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $('#category').click(() => {
@@ -375,12 +379,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             setupDropdown('dropdown', 'dropdown-btn', 'dropdown-text', 'dropdown-list');
         });
-    </script>
-    <script>
-        flatpickr("#date", {
-            dateFormat: "d-m-Y",
-        });
-    </script>      
+    </script>     
     <script src="../js/index.js"></script>
     <script>
         const fileInput = document.getElementById('file-upload');
