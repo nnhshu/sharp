@@ -306,11 +306,28 @@ select {
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+
 .nav-bar{
     z-index: 999;
 }
 
+input:focus-visible,
+input:focus {
+    border-radius: 0px !important;
+    outline: 0px !important;
+    outline-offset: 0px !important;
+}
+
 @media screen and (max-width: 767px) {
+
+    input[type="date"], input[type="time"]{
+        display:block;
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        min-height: 49px; 
+        min-width: 100%; 
+    }
+
     .modal {
         width: 90%;
     }
